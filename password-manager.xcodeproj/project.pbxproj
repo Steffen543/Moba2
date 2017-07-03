@@ -15,6 +15,7 @@
 		B30389E01F0A5847007747A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B30389DE1F0A5847007747A8 /* LaunchScreen.storyboard */; };
 		B30389EB1F0A5847007747A8 /* password_managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30389EA1F0A5847007747A8 /* password_managerTests.swift */; };
 		B30389F61F0A5847007747A8 /* password_managerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30389F51F0A5847007747A8 /* password_managerUITests.swift */; };
+		B32F46E71F0A78810040A286 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32F46E61F0A78810040A286 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B30389F11F0A5847007747A8 /* password-managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "password-managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30389F51F0A5847007747A8 /* password_managerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = password_managerUITests.swift; sourceTree = "<group>"; };
 		B30389F71F0A5847007747A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32F46E61F0A78810040A286 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		B30389D11F0A5847007747A8 /* password-manager */ = {
 			isa = PBXGroup;
 			children = (
+				B32F46E21F0A777D0040A286 /* Controller */,
 				B30389D21F0A5847007747A8 /* AppDelegate.swift */,
 				B30389D41F0A5847007747A8 /* ViewController.swift */,
 				B30389D61F0A5847007747A8 /* Main.storyboard */,
@@ -126,6 +129,14 @@
 				B30389F71F0A5847007747A8 /* Info.plist */,
 			);
 			path = "password-managerUITests";
+			sourceTree = "<group>";
+		};
+		B32F46E21F0A777D0040A286 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B32F46E61F0A78810040A286 /* MainViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 				B30389D51F0A5847007747A8 /* ViewController.swift in Sources */,
 				B30389DB1F0A5847007747A8 /* password_manager.xcdatamodeld in Sources */,
 				B30389D31F0A5847007747A8 /* AppDelegate.swift in Sources */,
+				B32F46E71F0A78810040A286 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +528,7 @@
 				B30389FC1F0A5847007747A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B30389FD1F0A5847007747A8 /* Build configuration list for PBXNativeTarget "password-managerTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +537,7 @@
 				B30389FF1F0A5847007747A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3038A001F0A5847007747A8 /* Build configuration list for PBXNativeTarget "password-managerUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +546,7 @@
 				B3038A021F0A5847007747A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

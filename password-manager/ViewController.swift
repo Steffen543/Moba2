@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -23,6 +24,24 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func createPassword() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let newPassword = NSEntityDescription.insertNewObject(forEntityName: "Password", into: managedContext) as! Password
+        
+        
+        newPassword.username = "wtf"
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        //let newPassword = Password(context: managedContext)
+        
+        
+        
+    }
     @IBAction func login(_ sender: UIButton) {
         let password = passwordTextField.text;
         

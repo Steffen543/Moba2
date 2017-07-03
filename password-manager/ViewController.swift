@@ -24,6 +24,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    
+    
+    
     func createPassword() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -38,11 +43,46 @@ class ViewController: UIViewController {
             print("Could not save. \(error), \(error.userInfo)")
         }
         //let newPassword = Password(context: managedContext)
-        
-        
-        
     }
+    
+    func readPassword() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "Password")
+        
+        //3
+        var passwords: [Password] = []
+        
+        
+        do {
+            passwords = try managedContext.fetch(fetchRequest) as! [Password]
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        
+        for pwd in passwords {
+            print("\(pwd.username)!")
+        }
+        
+        passwords.removeAll()
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     @IBAction func login(_ sender: UIButton) {
+        createPassword()
+        readPassword()
+        
+        
         let password = passwordTextField.text;
         
         if (password == "Hallo"){

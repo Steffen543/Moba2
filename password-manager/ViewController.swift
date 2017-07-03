@@ -11,6 +11,9 @@ import CoreData
 
 class ViewController: UIViewController {
 
+    //MARK: Properties
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -39,7 +42,27 @@ class ViewController: UIViewController {
         
         
     }
+    @IBAction func login(_ sender: UIButton) {
+        let password = passwordTextField.text;
+        
+        if (password == "Hallo"){
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+            let newController = storyBoard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController;
+            
+            self.present(newController, animated: true, completion: nil);
+            
+            
+        }
+        else{
+            /*let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+            let newController = storyBoard.instantiateViewController(withIdentifier: "FolderTableView") as! FolderTableViewController;
+            
+            self.present(newController, animated: true, completion: nil);*/
 
+        }
+        
+    }
 
 }
 

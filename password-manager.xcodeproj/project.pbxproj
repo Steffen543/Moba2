@@ -16,6 +16,7 @@
 		B30389EB1F0A5847007747A8 /* password_managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30389EA1F0A5847007747A8 /* password_managerTests.swift */; };
 		B30389F61F0A5847007747A8 /* password_managerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30389F51F0A5847007747A8 /* password_managerUITests.swift */; };
 		B32F46E71F0A78810040A286 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32F46E61F0A78810040A286 /* MainViewController.swift */; };
+		B32F46EB1F0A897F0040A286 /* FolderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32F46EA1F0A897F0040A286 /* FolderTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B30389F51F0A5847007747A8 /* password_managerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = password_managerUITests.swift; sourceTree = "<group>"; };
 		B30389F71F0A5847007747A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B32F46E61F0A78810040A286 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B32F46EA1F0A897F0040A286 /* FolderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				B32F46E61F0A78810040A286 /* MainViewController.swift */,
+				B32F46EA1F0A897F0040A286 /* FolderTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				B30389D51F0A5847007747A8 /* ViewController.swift in Sources */,
 				B30389DB1F0A5847007747A8 /* password_manager.xcdatamodeld in Sources */,
+				B32F46EB1F0A897F0040A286 /* FolderTableViewController.swift in Sources */,
 				B30389D31F0A5847007747A8 /* AppDelegate.swift in Sources */,
 				B32F46E71F0A78810040A286 /* MainViewController.swift in Sources */,
 			);

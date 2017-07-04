@@ -51,31 +51,42 @@ class DBCategoryManager
     //saves a given category object in the database. handles update and create
     public func save(category: Category)
     {
-        do {
-            try ManagedContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
+        do
+        {
+            try ManagedContext.save();
+        }
+        catch let error as NSError
+        {
+            print("Could not save. \(error), \(error.userInfo)");
         }
     }
     
     // returns a existing category from the database by the given id
     func load(categoryId: Int32) -> Category
     {
-        var result: Category?
+        var result: Category?;
         
         do
         {
-            var fetchResult: [Category] = []
+            var fetchResult: [Category] = [];
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Category");
-            fetchRequest.predicate = NSPredicate(format: "id = %@", NSNumber(value: categoryId))
-            fetchRequest.fetchLimit = 1
+            fetchRequest.predicate = NSPredicate(format: "id = %@", NSNumber(value: categoryId));
+            fetchRequest.fetchLimit = 1;
             
-            fetchResult = try ManagedContext.fetch(fetchRequest) as! [Category]
-            result = fetchResult.first
+            fetchResult = try ManagedContext.fetch(fetchRequest) as! [Category];
+            result = fetchResult.first;
+            
+            //get password count
+            if (result != nil)
+            {
+                let manager = DBPasswordManager();
+                let passwords = manager.load(categoryId: result!.id);
+                result!.passwordCount = Int32(passwords.count);
+            }
         }
         catch let error as NSError
         {
-            print("Could not fetch. \(error), \(error.userInfo)")
+            print("Could not fetch. \(error), \(error.userInfo)");
             
         }
         
@@ -90,14 +101,22 @@ class DBCategoryManager
         do
         {
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Category");
-            fetchResult = try ManagedContext.fetch(fetchRequest) as! [Category]
+            fetchResult = try ManagedContext.fetch(fetchRequest) as! [Category];
+            
+            //get the password count for each category
+            let manager = DBPasswordManager();
+            for loadedCategory in fetchResult
+            {
+                let passwords = manager.load(categoryId: loadedCategory.id);
+                loadedCategory.passwordCount = Int32(passwords.count);
+            }
         }
         catch let error as NSError
         {
-            print("Could not fetch. \(error), \(error.userInfo)")
+            print("Could not fetch. \(error), \(error.userInfo)");
         }
         
-        return fetchResult
+        return fetchResult;
     }
     
 }

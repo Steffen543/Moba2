@@ -82,7 +82,7 @@ class DBPasswordManager
     }
     
     //returns all passwords in a given category
-    func load(categoryId: Int) -> [Password]
+    func load(categoryId: Int32) -> [Password]
     {
         var fetchResult: [Password] = []
         

@@ -59,30 +59,6 @@ class ViewController: UIViewController {
     
     @IBAction func login(_ sender: UIButton) {
         
-        passwordTests();
-        categoryTests();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        passwords.removeAll()
-    }
-    
-    
-        
-    
-    
-    @IBAction func login(_ sender: UIButton) {
-        createPassword()
-        readPassword()
         
         
         let password = passwordTextField.text;

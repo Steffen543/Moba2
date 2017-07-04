@@ -297,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30389D51F0A5847007747A8 /* ViewController.swift in Sources */,
+				729171651F0BC96D0036D53E /* DBCategoryManager.swift in Sources */,
 				B359B8761F0BC3270094346B /* PasswordsViewController.swift in Sources */,
 				B30389DB1F0A5847007747A8 /* password_manager.xcdatamodeld in Sources */,
 				729171631F0BA8330036D53E /* DBPasswordManager.swift in Sources */,

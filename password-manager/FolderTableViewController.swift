@@ -16,10 +16,12 @@ class FolderTableViewController : UITableViewController  {
     @IBOutlet weak var MainSearchBar: UISearchBar!
     @IBOutlet var MainTableView: UITableView!
     
-
-    var Folders = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
     
-    var FoldersFiltered:[String] = []
+
+    
+    var Folders : [Category]?;
+    
+    var FoldersFiltered:[Category]?;
     
     let searchController = UISearchController(searchResultsController: nil);
     
@@ -27,6 +29,8 @@ class FolderTableViewController : UITableViewController  {
     {
         super.viewDidLoad();
         
+        let categoryManager = DBCategoryManager();
+        Folders = categoryManager.loadAll();
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
@@ -36,8 +40,8 @@ class FolderTableViewController : UITableViewController  {
     
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
-        FoldersFiltered = Folders.filter { folder in
-            return folder.lowercased().range(of: searchText.lowercased()) != nil
+        FoldersFiltered = Folders?.filter { folder in
+            return folder.name?.lowercased().range(of: searchText.lowercased()) != nil
         }
         
         tableView.reloadData()
@@ -53,9 +57,9 @@ class FolderTableViewController : UITableViewController  {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         if searchController.isActive && searchController.searchBar.text != "" {
-            return FoldersFiltered.count
+            return FoldersFiltered!.count
         }
-        return Folders.count;
+        return Folders!.count;
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -63,11 +67,11 @@ class FolderTableViewController : UITableViewController  {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath);
 
         if searchController.isActive && searchController.searchBar.text != "" {
-            cell.textLabel?.text = FoldersFiltered[indexPath.row];
+            cell.textLabel?.text = FoldersFiltered![indexPath.row].name;
             cell.detailTextLabel?.text = "FILTER";
 
         } else {
-            cell.textLabel?.text = Folders[indexPath.row];
+            cell.textLabel?.text = Folders![indexPath.row].name;
             cell.detailTextLabel?.text = "TEST";
 
         }
@@ -78,6 +82,7 @@ class FolderTableViewController : UITableViewController  {
         let backItem = UIBarButtonItem()
         backItem.title = "Zurück"
         navigationItem.backBarButtonItem = backItem
+   
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)

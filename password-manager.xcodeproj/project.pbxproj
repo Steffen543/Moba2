@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		729171631F0BA8330036D53E /* DBPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729171621F0BA8330036D53E /* DBPasswordManager.swift */; };
+		729171651F0BC96D0036D53E /* DBCategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729171641F0BC96D0036D53E /* DBCategoryManager.swift */; };
 		B30389D31F0A5847007747A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30389D21F0A5847007747A8 /* AppDelegate.swift */; };
 		B30389D51F0A5847007747A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30389D41F0A5847007747A8 /* ViewController.swift */; };
 		B30389D81F0A5847007747A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B30389D61F0A5847007747A8 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		729171621F0BA8330036D53E /* DBPasswordManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPasswordManager.swift; sourceTree = "<group>"; };
+		729171641F0BC96D0036D53E /* DBCategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBCategoryManager.swift; sourceTree = "<group>"; };
 		B30389CF1F0A5847007747A8 /* password-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "password-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30389D21F0A5847007747A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B30389D41F0A5847007747A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		729171611F0BA7F30036D53E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				729171621F0BA8330036D53E /* DBPasswordManager.swift */,
+				729171641F0BC96D0036D53E /* DBCategoryManager.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		B30389C61F0A5847007747A8 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +116,7 @@
 		B30389D11F0A5847007747A8 /* password-manager */ = {
 			isa = PBXGroup;
 			children = (
+				729171611F0BA7F30036D53E /* Data */,
 				B32F46E21F0A777D0040A286 /* Controller */,
 				B30389D21F0A5847007747A8 /* AppDelegate.swift */,
 				B30389D41F0A5847007747A8 /* ViewController.swift */,
@@ -280,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30389D51F0A5847007747A8 /* ViewController.swift in Sources */,
+				729171651F0BC96D0036D53E /* DBCategoryManager.swift in Sources */,
 				B30389DB1F0A5847007747A8 /* password_manager.xcdatamodeld in Sources */,
+				729171631F0BA8330036D53E /* DBPasswordManager.swift in Sources */,
 				B32F46EB1F0A897F0040A286 /* FolderTableViewController.swift in Sources */,
 				B30389D31F0A5847007747A8 /* AppDelegate.swift in Sources */,
 				B32F46E71F0A78810040A286 /* MainViewController.swift in Sources */,

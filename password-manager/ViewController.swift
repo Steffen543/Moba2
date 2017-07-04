@@ -27,46 +27,51 @@ class ViewController: UIViewController {
     
     
     
-    
-    
-    func createPassword() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.persistentContainer.viewContext
+    func passwordTests()
+    {
+        let Manager = DBPasswordManager();
+        let newPassword = Manager.getNewObject();
         
-        let newPassword = NSEntityDescription.insertNewObject(forEntityName: "Password", into: managedContext) as! Password
+        newPassword.username = "BigBanana";
+        newPassword.password = String(arc4random());
         
-        
-        newPassword.username = "wtf"
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-        //let newPassword = Password(context: managedContext)
+        Manager.save(password: newPassword);
+        Manager.load(passwordId: newPassword.id);
+        Manager.load(categoryId: 5);
     }
     
-    func readPassword() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.persistentContainer.viewContext
+    
+    func categoryTests()
+    {
+        let Manager = DBCategoryManager();
+        let newCategory = Manager.getNewObject();
+        
+        newCategory.name = String(arc4random());
+        
+        Manager.save(category: newCategory);
+        Manager.load(categoryId: newCategory.id);
+        Manager.loadAll();
+    }
+    
+    
+    
+    
+    
+    @IBAction func login(_ sender: UIButton) {
+        
+        passwordTests();
+        categoryTests();
         
         
-        let fetchRequest =
-            NSFetchRequest<NSManagedObject>(entityName: "Password")
-        
-        //3
-        var passwords: [Password] = []
         
         
-        do {
-            passwords = try managedContext.fetch(fetchRequest) as! [Password]
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
         
         
-        for pwd in passwords {
-            print("\(pwd.username)!")
-        }
+        
+        
+        
+        
+        
         
         passwords.removeAll()
     }

@@ -9,24 +9,96 @@
 import Foundation
 import UIKit
 
-class FolderTableViewController : UITableViewController{
+
+class FolderTableViewController : UITableViewController  {
     
-    var folders = [ "Test", "Ordner", "Gay", "swift", "stinkt" ];
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    @IBOutlet weak var MainSearchBar: UISearchBar!
+    @IBOutlet var MainTableView: UITableView!
+    
+
+    var Folders = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
+    
+    var FoldersFiltered:[String] = []
+    
+    let searchController = UISearchController(searchResultsController: nil);
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad();
+        
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+    }
+    
+    
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        FoldersFiltered = Folders.filter { folder in
+            return folder.lowercased().range(of: searchText.lowercased()) != nil
+        }
+        
+        tableView.reloadData()
+    }
+
+    
+    
+    override func numberOfSections(in tableView: UITableView) -> Int
+    {
         return 1;
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return folders.count;
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        if searchController.isActive && searchController.searchBar.text != "" {
+            return FoldersFiltered.count
+        }
+        return Folders.count;
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath);
-        cell.textLabel?.text = folders[indexPath.row];
-        cell.detailTextLabel?.text = "TEST";
+
+        if searchController.isActive && searchController.searchBar.text != "" {
+            cell.textLabel?.text = FoldersFiltered[indexPath.row];
+            cell.detailTextLabel?.text = "FILTER";
+
+        } else {
+            cell.textLabel?.text = Folders[indexPath.row];
+            cell.detailTextLabel?.text = "TEST";
+
+        }
         return cell;
-        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Zurück"
+        navigationItem.backBarButtonItem = backItem
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        //var selectedFolder = Folders[indexPath.row];
+        
+        /*let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let newController = storyBoard.instantiateViewController(withIdentifier: "PasswordsViewController");
+        self.present(newController, animated: true, completion: nil);*/
+        
+        //print(Folders[indexPath.row])
+    }
+    
     
 }
+
+extension FolderTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
+
+    }
+}
+
+

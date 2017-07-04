@@ -72,10 +72,7 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
-    
-    
+        
     
     
     @IBAction func login(_ sender: UIButton) {
@@ -87,17 +84,12 @@ class ViewController: UIViewController {
         
         if (password == "Hallo"){
             
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
-            let newController = storyBoard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController;
-            
-            self.present(newController, animated: true, completion: nil);
-            
+            print("NICHT OK");
             
         }
         else{
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
-            let newController = storyBoard.instantiateViewController(withIdentifier: "FolderTableView") as! FolderTableViewController;
-            
+            let newController = storyBoard.instantiateViewController(withIdentifier: "FolderViewController");
             self.present(newController, animated: true, completion: nil);
 
         }

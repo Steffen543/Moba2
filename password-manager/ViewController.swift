@@ -50,7 +50,11 @@ class ViewController: UIViewController {
         
         Manager.save(category: newCategory);
         Manager.load(categoryId: newCategory.id);
-        Manager.loadAll();
+        let cats = Manager.loadAll();
+        
+        for cat in cats{
+            print("\(cat.passwordCount)");
+        }
     }
     
     

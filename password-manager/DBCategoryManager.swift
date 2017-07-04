@@ -75,6 +75,14 @@ class DBCategoryManager
             
             fetchResult = try ManagedContext.fetch(fetchRequest) as! [Category];
             result = fetchResult.first;
+            
+            //get password count
+            if (result != nil)
+            {
+                let manager = DBPasswordManager();
+                let passwords = manager.load(categoryId: result!.id);
+                result!.passwordCount = Int32(passwords.count);
+            }
         }
         catch let error as NSError
         {
@@ -95,6 +103,7 @@ class DBCategoryManager
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Category");
             fetchResult = try ManagedContext.fetch(fetchRequest) as! [Category];
             
+            //get the password count for each category
             let manager = DBPasswordManager();
             for loadedCategory in fetchResult
             {

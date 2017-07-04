@@ -95,10 +95,10 @@ class ViewController: UIViewController {
             
         }
         else{
-            /*let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
             let newController = storyBoard.instantiateViewController(withIdentifier: "FolderTableView") as! FolderTableViewController;
             
-            self.present(newController, animated: true, completion: nil);*/
+            self.present(newController, animated: true, completion: nil);
 
         }
         

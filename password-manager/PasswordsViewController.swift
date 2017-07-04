@@ -11,8 +11,12 @@ import UIKit;
 
 class PasswordsViewController : UITableViewController{
     
+    public var SelectedFolder : Category?;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = SelectedFolder?.name;
         
     }
     

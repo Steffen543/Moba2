@@ -85,15 +85,24 @@ class FolderTableViewController : UITableViewController  {
    
     }
     
+  
+
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        //var selectedFolder = Folders[indexPath.row];
+        let selectedFolder = Folders?[indexPath.row];
         
-        /*let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
-        let newController = storyBoard.instantiateViewController(withIdentifier: "PasswordsViewController");
-        self.present(newController, animated: true, completion: nil);*/
+        let backItem = UIBarButtonItem()
+        backItem.title = "Zurück"
+        navigationItem.backBarButtonItem = backItem
         
-        //print(Folders[indexPath.row])
+        let destinationVC = PasswordsViewController()
+        destinationVC.SelectedFolder = selectedFolder
+        
+        
+        //destinationVC.performSegue(withIdentifier: "showPasswordsSegue", sender: self)
+        navigationController?.pushViewController(destinationVC, animated: true)
+        
     }
     
     

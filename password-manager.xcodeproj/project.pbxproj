@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7267E5AE1F0FB0DE0057DC4C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7267E5AD1F0FB0DE0057DC4C /* Security.framework */; };
 		7267E5B01F0FB18D0057DC4C /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267E5AF1F0FB18D0057DC4C /* SecurityManager.swift */; };
-		7267E5B21F0FC38B0057DC4C /* RandomPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267E5B11F0FC38B0057DC4C /* RandomPassword.swift */; };
+		7267E5B31F0FCD350057DC4C /* RandomPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267E5B11F0FC38B0057DC4C /* RandomPassword.swift */; };
 		729171631F0BA8330036D53E /* DBPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729171621F0BA8330036D53E /* DBPasswordManager.swift */; };
 		729171651F0BC96D0036D53E /* DBCategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729171641F0BC96D0036D53E /* DBCategoryManager.swift */; };
 		B30389D31F0A5847007747A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30389D21F0A5847007747A8 /* AppDelegate.swift */; };
@@ -319,6 +319,7 @@
 			files = (
 				B30389D51F0A5847007747A8 /* ViewController.swift in Sources */,
 				729171651F0BC96D0036D53E /* DBCategoryManager.swift in Sources */,
+				7267E5B31F0FCD350057DC4C /* RandomPassword.swift in Sources */,
 				B359B8761F0BC3270094346B /* PasswordsViewController.swift in Sources */,
 				B30389DB1F0A5847007747A8 /* password_manager.xcdatamodeld in Sources */,
 				729171631F0BA8330036D53E /* DBPasswordManager.swift in Sources */,

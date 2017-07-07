@@ -20,8 +20,9 @@ class ViewController: UIViewController {
         
         
         
-        
-        /*let password = RandomPassword();
+
+        let password = RandomPassword();
+
         password.useLowerCase();
         password.useUpperCase();
         password.useNumbers();
@@ -30,7 +31,6 @@ class ViewController: UIViewController {
         let passwordString = password.getPassword(length: 16);
         print("Passwort: \(passwordString)");
         SecurityManager.setPasscode(identifier: "root", passcode: passwordString);
-        */
         
         
     }

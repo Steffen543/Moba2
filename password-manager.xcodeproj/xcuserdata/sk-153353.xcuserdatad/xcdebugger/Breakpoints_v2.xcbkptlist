@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "password-manager/FolderTableViewController.swift"
+            timestampString = "520861307.416693"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "FolderTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.FolderTableViewController.__deallocating_deinit"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/FolderTableViewController.swift"
+                  timestampString = "520860097.203235"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.FolderTableViewController.init (style : __C.UITableViewStyle) -&gt; password_manager.FolderTableViewController"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/FolderTableViewController.swift"
+                  timestampString = "520860097.204613"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.FolderTableViewController.__allocating_init (style : __C.UITableViewStyle) -&gt; password_manager.FolderTableViewController"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/FolderTableViewController.swift"
+                  timestampString = "520860097.205928"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.FolderTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; password_manager.FolderTableViewController"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/FolderTableViewController.swift"
+                  timestampString = "520860097.207144"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.FolderTableViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; password_manager.FolderTableViewController"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/FolderTableViewController.swift"
+                  timestampString = "520860097.208347"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.FolderTableViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;password_manager.FolderTableViewController&gt;"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/FolderTableViewController.swift"
+                  timestampString = "520860097.209538"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.FolderTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;password_manager.FolderTableViewController&gt;"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/FolderTableViewController.swift"
+                  timestampString = "520860097.211047"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "password-manager/PasswordsViewController.swift"
+            timestampString = "521127937.988233"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.PasswordsViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/PasswordsViewController.swift"
+                  timestampString = "521123540.561989"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1060">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.PasswordsViewController.viewDidLoad () -&gt; ()"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/PasswordsViewController.swift"
+                  timestampString = "521123540.563744"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1800">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "password-manager/PasswordsViewController.swift"
+            timestampString = "521126421.224753"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "PasswordsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.PasswordsViewController.MainTableView.getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITableView&gt;"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/PasswordsViewController.swift"
+                  timestampString = "521124323.825021"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.PasswordsViewController.MainTableView.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITableView&gt;"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/PasswordsViewController.swift"
+                  timestampString = "521124323.82743"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.PasswordsViewController.init (style : __C.UITableViewStyle) -&gt; password_manager.PasswordsViewController"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/PasswordsViewController.swift"
+                  timestampString = "521124323.829981"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.PasswordsViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; password_manager.PasswordsViewController"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/PasswordsViewController.swift"
+                  timestampString = "521124323.831929"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "115">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "password_manager.PasswordsViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;password_manager.PasswordsViewController&gt;"
+                  moduleName = "password-manager"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/PasswordsViewController.swift"
+                  timestampString = "521124323.833164"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "74">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "password-manager/PasswordsViewController.swift"
+            timestampString = "521128365.864375"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "AddButtonClick(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "password-manager/FolderTableViewController.swift"
+            timestampString = "521128666.193144"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

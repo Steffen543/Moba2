@@ -9,18 +9,21 @@
 import UIKit
 import Security
 
-let kSecClassGenericPasswordValue = String(format: kSecClassGenericPassword as String)
-let kSecClassValue = String(format: kSecClass as String)
-let kSecAttrServiceValue = String(format: kSecAttrService as String)
-let kSecValueDataValue = String(format: kSecValueData as String)
-let kSecMatchLimitValue = String(format: kSecMatchLimit as String)
-let kSecReturnDataValue = String(format: kSecReturnData as String)
-let kSecMatchLimitOneValue = String(format: kSecMatchLimitOne as String)
-let kSecAttrAccountValue = String(format: kSecAttrAccount as String)
-
-class SecurityManager {
+class SecurityManager
+{
+    static let kSecClassGenericPasswordValue = String(format: kSecClassGenericPassword as String)
+    static let kSecClassValue = String(format: kSecClass as String)
+    static let kSecAttrServiceValue = String(format: kSecAttrService as String)
+    static let kSecValueDataValue = String(format: kSecValueData as String)
+    static let kSecMatchLimitValue = String(format: kSecMatchLimit as String)
+    static let kSecReturnDataValue = String(format: kSecReturnData as String)
+    static let kSecMatchLimitOneValue = String(format: kSecMatchLimitOne as String)
+    static let kSecAttrAccountValue = String(format: kSecAttrAccount as String)
+    
+    
     //sets or creates a passwort into the keycain
-    public static func setPasscode(identifier: String, passcode: String) {
+    public static func setPasscode(identifier: String, passcode: String)
+    {
         if let dataFromString = passcode.data(using: String.Encoding.utf8) {
             let keychainQuery = [
                 kSecClassValue: kSecClassGenericPasswordValue,
@@ -33,7 +36,8 @@ class SecurityManager {
     }
     
     //returns a password from the keychain
-    public static func getPasscode(identifier: String) -> String? {
+    public static func getPasscode(identifier: String) -> String?
+    {
         let keychainQuery = [
             kSecClassValue: kSecClassGenericPasswordValue,
             kSecAttrServiceValue: identifier,
@@ -43,6 +47,7 @@ class SecurityManager {
         var dataTypeRef: AnyObject?
         let status: OSStatus = SecItemCopyMatching(keychainQuery, &dataTypeRef)
         var passcode: String?
+        
         if (status == errSecSuccess) {
             if let retrievedData = dataTypeRef as? Data,
                 let result = String(data: retrievedData, encoding: String.Encoding.utf8) {
@@ -55,3 +60,14 @@ class SecurityManager {
         return passcode
     }
 }
+
+
+
+
+
+
+
+
+
+
+

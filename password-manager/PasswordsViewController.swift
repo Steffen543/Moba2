@@ -45,7 +45,7 @@ class PasswordsViewController : UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "PasswordCell", for: indexPath);
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PasswordCell", for: indexPath);
         
         cell.textLabel?.text = Passwords![indexPath.row].name;
         cell.detailTextLabel?.text = "TEST";

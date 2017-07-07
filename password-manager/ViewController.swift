@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         
         
         
-        
         let password = RandomPassword();
         password.useLowerCase();
         password.useUpperCase();

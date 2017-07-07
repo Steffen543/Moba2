@@ -51,7 +51,15 @@ class DBPasswordManager
     public func save(password: Password)
     {
         do {
+            
+            //the password will now be saved in the keychain. the SQLite database ist not encrypted
+            let hashKey = String(password.id.hashValue);
+            SecurityManager.setPasscode(identifier: hashKey, passcode: password.password!);
+            password.password = hashKey;
+            
+            //persisting the password
             try ManagedContext.save()
+            
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }

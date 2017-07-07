@@ -32,7 +32,7 @@ class PasswordsViewController : UITableViewController{
             let Manager = DBPasswordManager();
             let newPassword = Manager.getNewObject();
             
-            newPassword.name = text;
+            //newPassword.name = text;
             
             Manager.save(password: newPassword);
             
@@ -53,7 +53,7 @@ class PasswordsViewController : UITableViewController{
         let Manager = DBPasswordManager();
         Passwords = Manager.load(categoryId: (SelectedFolder?.id)!)
         
-        print(Passwords?.count);
+        //print(Passwords?.count);
         
     }
     

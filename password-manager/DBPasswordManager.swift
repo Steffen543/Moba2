@@ -89,7 +89,7 @@ class DBPasswordManager
         do
         {
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Password");
-            fetchRequest.predicate = NSPredicate(format: "id = %@", NSNumber(value: categoryId))
+            fetchRequest.predicate = NSPredicate(format: "categoryId = %@", NSNumber(value: categoryId))
             
             fetchResult = try ManagedContext.fetch(fetchRequest) as! [Password]
         }

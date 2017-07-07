@@ -115,30 +115,30 @@
             </objects>
             <point key="canvasLocation" x="1722" y="-36"/>
         </scene>
-        <!--Folder Name-->
-        <scene sceneID="s1x-SW-Tho">
+        <!--Root View Controller-->
+        <scene sceneID="NeQ-vH-377">
             <objects>
-                <tableViewController id="vPa-3m-8MJ" customClass="PasswordsViewController" customModule="password_manager" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GQC-4O-DuH">
+                <tableViewController id="7Fc-KL-sRB" customClass="PasswordsViewController" customModule="password_manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Ai-AY-sBI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LabelCell" textLabel="FEO-yi-cyq" detailTextLabel="fAY-IF-7rP" style="IBUITableViewCellStyleSubtitle" id="VwG-Kt-yE0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PasswordCell" textLabel="tOJ-th-jET" detailTextLabel="jjD-hb-cSW" style="IBUITableViewCellStyleSubtitle" id="lnL-sQ-8VZ">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VwG-Kt-yE0" id="pbO-Av-pNF">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lnL-sQ-8VZ" id="IAZ-lQ-ijs">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FEO-yi-cyq">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tOJ-th-jET">
                                             <rect key="frame" x="15" y="4" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fAY-IF-7rP">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jjD-hb-cSW">
                                             <rect key="frame" x="15" y="25" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -150,21 +150,34 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="vPa-3m-8MJ" id="FqA-C4-R7f"/>
-                            <outlet property="delegate" destination="vPa-3m-8MJ" id="BQ9-Xu-fVb"/>
+                            <outlet property="dataSource" destination="7Fc-KL-sRB" id="IuU-6W-bxj"/>
+                            <outlet property="delegate" destination="7Fc-KL-sRB" id="lHj-JX-7W3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Folder Name" id="zOl-IA-0Sf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xoo-Gi-oQ4">
-                            <connections>
-                                <action selector="AddButtonClicked:" destination="vPa-3m-8MJ" id="XKT-72-jRn"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="KZB-bk-nxX"/>
+                    <connections>
+                        <outlet property="MainTableView" destination="1Ai-AY-sBI" id="Ei5-Ih-qD0"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="88c-M3-65M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r65-Mc-hOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="702"/>
+            <point key="canvasLocation" x="3777" y="-36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wGf-NP-5ZN">
+            <objects>
+                <navigationController storyboardIdentifier="FolderPasswordsView" id="0IM-Vy-hhZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ACy-tY-XYp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7Fc-KL-sRB" kind="relationship" relationship="rootViewController" id="aPY-ic-eoz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2f-ni-Tar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2825" y="-36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ujc-1M-fdB">
@@ -183,24 +196,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZH-97-82C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="-36"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Q8C-09-f7a">
-            <objects>
-                <navigationController storyboardIdentifier="PasswordsViewController" automaticallyAdjustsScrollViewInsets="NO" id="VkW-I6-dHX" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HEb-Fw-DWc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vPa-3m-8MJ" kind="relationship" relationship="rootViewController" id="eh9-Iu-Ykg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NOI-ud-IHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="708" y="702"/>
         </scene>
     </scenes>
 </document>

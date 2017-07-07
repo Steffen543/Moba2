@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7267E5AE1F0FB0DE0057DC4C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7267E5AD1F0FB0DE0057DC4C /* Security.framework */; };
+		7267E5B01F0FB18D0057DC4C /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267E5AF1F0FB18D0057DC4C /* SecurityManager.swift */; };
 		729171631F0BA8330036D53E /* DBPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729171621F0BA8330036D53E /* DBPasswordManager.swift */; };
 		729171651F0BC96D0036D53E /* DBCategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729171641F0BC96D0036D53E /* DBCategoryManager.swift */; };
 		B30389D31F0A5847007747A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30389D21F0A5847007747A8 /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7267E5AD1F0FB0DE0057DC4C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7267E5AF1F0FB18D0057DC4C /* SecurityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityManager.swift; sourceTree = "<group>"; };
 		729171621F0BA8330036D53E /* DBPasswordManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPasswordManager.swift; sourceTree = "<group>"; };
 		729171641F0BC96D0036D53E /* DBCategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBCategoryManager.swift; sourceTree = "<group>"; };
 		B30389CF1F0A5847007747A8 /* password-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "password-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7267E5AE1F0FB0DE0057DC4C /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,11 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7267E5AC1F0FB0DE0057DC4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7267E5AD1F0FB0DE0057DC4C /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		729171611F0BA7F30036D53E /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				729171621F0BA8330036D53E /* DBPasswordManager.swift */,
 				729171641F0BC96D0036D53E /* DBCategoryManager.swift */,
+				7267E5AF1F0FB18D0057DC4C /* SecurityManager.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -102,6 +116,7 @@
 				B30389E91F0A5847007747A8 /* password-managerTests */,
 				B30389F41F0A5847007747A8 /* password-managerUITests */,
 				B30389D01F0A5847007747A8 /* Products */,
+				7267E5AC1F0FB0DE0057DC4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,6 +316,7 @@
 				B359B8761F0BC3270094346B /* PasswordsViewController.swift in Sources */,
 				B30389DB1F0A5847007747A8 /* password_manager.xcdatamodeld in Sources */,
 				729171631F0BA8330036D53E /* DBPasswordManager.swift in Sources */,
+				7267E5B01F0FB18D0057DC4C /* SecurityManager.swift in Sources */,
 				B32F46EB1F0A897F0040A286 /* FolderTableViewController.swift in Sources */,
 				B30389D31F0A5847007747A8 /* AppDelegate.swift in Sources */,
 				B32F46E71F0A78810040A286 /* MainViewController.swift in Sources */,

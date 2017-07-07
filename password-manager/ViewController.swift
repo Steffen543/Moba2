@@ -25,49 +25,11 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
-    func passwordTests()
-    {
-        let Manager = DBPasswordManager();
-        let newPassword = Manager.getNewObject();
-        
-        newPassword.username = "BigBanana";
-        newPassword.password = String(arc4random());
-        
-        Manager.save(password: newPassword);
-        Manager.load(passwordId: newPassword.id);
-        Manager.load(categoryId: 5);
-    }
-    
-    
-    func categoryTests()
-    {
-        let Manager = DBCategoryManager();
-        let newCategory = Manager.getNewObject();
-        
-        newCategory.name = String(arc4random());
-        
-        Manager.save(category: newCategory);
-        Manager.load(categoryId: newCategory.id);
-        let cats = Manager.loadAll();
-        
-        for cat in cats{
-            print("\(cat.passwordCount)");
-        }
-    }
-    
-    
-    
-    
-    
     @IBAction func login(_ sender: UIButton) {
-        
-        
-        
+        SecurityManager.setPasscode(identifier: "root", passcode: "Hallo");
         let password = passwordTextField.text;
         
-        if (password == "Hallo"){
+        if (password != SecurityManager.getPasscode(identifier: "root")){
             
             print("NICHT OK");
             

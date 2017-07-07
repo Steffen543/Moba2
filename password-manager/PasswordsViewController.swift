@@ -13,7 +13,6 @@ class PasswordsViewController : UITableViewController{
     
     public var SelectedFolder : Category?;
     var Passwords : [Password]?;
-  
     @IBOutlet var MainTableView: UITableView!
  
     
@@ -22,16 +21,46 @@ class PasswordsViewController : UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "PasswordCell")
+        
+        
         title = SelectedFolder?.name;
         let Manager = DBPasswordManager();
         Passwords = Manager.load(categoryId: (SelectedFolder?.id)!)
-        
-
         definesPresentationContext = true
-
         print(Passwords?.count);
-        
     }
+    
+    
+    @IBAction func AddButtonClick(_ sender: Any) {
+        let alert = UIAlertController(title: "Passwort hinzufügen", message: "Geben Sie einen Namen ein", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.text = ""
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            
+        }))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            let text = textField?.text;
+            
+            if text == "" { return; }
+            
+            let Manager = DBPasswordManager();
+            let newPassword = Manager.getNewObject();
+            
+            newPassword.name = text;
+            newPassword.password = "";
+            newPassword.categoryId = (self.SelectedFolder?.id)!;
+            
+            Manager.save(password: newPassword);
+            
+            self.Passwords?.append(newPassword);
+            self.MainTableView.reloadData();
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int
     {
@@ -45,12 +74,15 @@ class PasswordsViewController : UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "PasswordCell", for: indexPath);
-        
-        cell.textLabel?.text = Passwords![indexPath.row].name;
-        cell.detailTextLabel?.text = "TEST";
-            
-        
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "PasswordCell");
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator;
+        let pwd = Passwords![indexPath.row];
+        if pwd.mail != "" {
+            cell.detailTextLabel?.text = pwd.mail;
+        } else {
+            cell.detailTextLabel?.text = pwd.username;
+        }
+        cell.textLabel?.text = pwd.name;
         return cell;
     }
     
@@ -79,30 +111,6 @@ class PasswordsViewController : UITableViewController{
         
          
          
-         let alert = UIAlertController(title: "Passwort hinzufügen", message: "Geben Sie einen Namen ein", preferredStyle: .alert)
-         alert.addTextField { (textField) in
-         textField.text = ""
-         }
-         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-         
-         }))
-         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-         let textField = alert?.textFields![0]
-         let text = textField?.text;
-         
-         if text == "" { return; }
-         
-         let Manager = DBPasswordManager();
-         let newPassword = Manager.getNewObject();
-         
-         newPassword.name = text;
-         
-         Manager.save(password: newPassword);
-         
-         self.Passwords?.append(newPassword);
-         self.MainTableView.reloadData();
-         }))
-         self.present(alert, animated: true, completion: nil)
          
          
          

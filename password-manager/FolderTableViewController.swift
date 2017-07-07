@@ -94,20 +94,20 @@ class FolderTableViewController : UITableViewController  {
 
         if searchController.isActive && searchController.searchBar.text != "" {
             cell.textLabel?.text = FoldersFiltered![indexPath.row].name;
-            cell.detailTextLabel?.text = "FILTER";
+            cell.detailTextLabel?.text = String(FoldersFiltered![indexPath.row].passwordCount) + " Einträge";
 
         } else {
             cell.textLabel?.text = Folders![indexPath.row].name;
-            cell.detailTextLabel?.text = "TEST";
+            cell.detailTextLabel?.text = String(Folders![indexPath.row].passwordCount) + " Einträge";
 
         }
         return cell;
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let backItem = UIBarButtonItem()
+        /*let backItem = UIBarButtonItem()
         backItem.title = "Zurück"
-        navigationItem.backBarButtonItem = backItem
+        navigationItem.backBarButtonItem = backItem*/
    
     }
     
@@ -123,12 +123,15 @@ class FolderTableViewController : UITableViewController  {
         backItem.title = "Zurück"
         navigationItem.backBarButtonItem = backItem
         
-        let destinationVC = PasswordsViewController()
-        destinationVC.SelectedFolder = selectedFolder
-        
-        
-        //destinationVC.performSegue(withIdentifier: "showPasswordsSegue", sender: self)
-        navigationController?.pushViewController(destinationVC, animated: true)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let newController = storyBoard.instantiateViewController(withIdentifier: "PasswordsViewController");
+
+        // get the nav controller
+        let navController = newController as! UINavigationController;
+        // get the view controller from the nav controller
+        let viewController = navController.topViewController as!PasswordsViewController;
+        viewController.SelectedFolder = selectedFolder;
+        navigationController?.pushViewController(viewController, animated: true)
         
     }
     

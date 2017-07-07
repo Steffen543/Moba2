@@ -17,6 +17,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+        
+        let password = RandomPassword();
+        password.useLowerCase();
+        password.useUpperCase();
+        password.useNumbers();
+        password.useSpeciaCharaters();
+        
+        let passwordString = password.getPassword(length: 16);
+        print("Passwort: \(passwordString)");
+        SecurityManager.setPasscode(identifier: "root", passcode: passwordString);
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,21 +42,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func login(_ sender: UIButton) {
-        SecurityManager.setPasscode(identifier: "root", passcode: "Hallo");
+        
         let password = passwordTextField.text;
-        
         if (password != SecurityManager.getPasscode(identifier: "root")){
-            
-            print("NICHT OK");
-            
-        }
-        else{
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
-            let newController = storyBoard.instantiateViewController(withIdentifier: "FolderViewController");
-            self.present(newController, animated: true, completion: nil);
-
+            print("PASSWORT NICHT OK");
         }
         
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let newController = storyBoard.instantiateViewController(withIdentifier: "FolderViewController");
+        self.present(newController, animated: true, completion: nil);
     }
 
 }

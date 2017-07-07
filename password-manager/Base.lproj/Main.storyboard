@@ -102,7 +102,7 @@
                     <navigationItem key="navigationItem" title="Passwort Manager" id="uDq-qU-mbc">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1n6-Cf-fcI">
                             <connections>
-                                <segue destination="bVk-5c-yzo" kind="show" id="FLf-b8-EJ7"/>
+                                <action selector="AddButtonClick:" destination="6Ri-xt-q5n" id="EPo-bU-cSb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -114,25 +114,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjU-7r-W0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1722" y="-36"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="111-7s-Mz8">
-            <objects>
-                <viewController id="bVk-5c-yzo" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oas-JU-vUs"/>
-                        <viewControllerLayoutGuide type="bottom" id="nWa-uF-NHv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Cdk-iJ-wri">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="5WP-KN-fDm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3WP-Ty-nUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2684" y="-921"/>
         </scene>
         <!--Folder Name-->
         <scene sceneID="s1x-SW-Tho">
@@ -173,11 +154,17 @@
                             <outlet property="delegate" destination="vPa-3m-8MJ" id="BQ9-Xu-fVb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Folder Name" id="zOl-IA-0Sf"/>
+                    <navigationItem key="navigationItem" title="Folder Name" id="zOl-IA-0Sf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xoo-Gi-oQ4">
+                            <connections>
+                                <action selector="AddButtonClicked:" destination="vPa-3m-8MJ" id="XKT-72-jRn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88c-M3-65M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2474" y="787"/>
+            <point key="canvasLocation" x="1721" y="702"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ujc-1M-fdB">
@@ -213,28 +200,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOI-ud-IHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1529" y="787"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xFA-KQ-XMO">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5iw-od-t3r" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PEM-KB-9rL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="bVk-5c-yzo" kind="relationship" relationship="rootViewController" id="l5u-vE-bJB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bUu-hT-ObX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2684" y="-36.431784107946029"/>
+            <point key="canvasLocation" x="708" y="702"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="FLf-b8-EJ7"/>
-    </inferredMetricsTieBreakers>
 </document>

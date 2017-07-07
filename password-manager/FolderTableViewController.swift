@@ -15,15 +15,41 @@ class FolderTableViewController : UITableViewController  {
     
     @IBOutlet weak var MainSearchBar: UISearchBar!
     @IBOutlet var MainTableView: UITableView!
+    var Folders : [Category]?;
+    var FoldersFiltered:[Category]?;
+    let searchController = UISearchController(searchResultsController: nil);
+
     
+    
+    @IBAction func AddButtonClick(_ sender: Any) {
+        let alert = UIAlertController(title: "Kategorie hinzufügen", message: "Geben Sie einen Namen ein", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.text = ""
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+ 
+        }))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            let text = textField?.text;
+            
+            if text == "" { return; }
+            
+            let Manager = DBCategoryManager();
+            let newCategory = Manager.getNewObject();
+            
+            newCategory.name = text;
+            
+            Manager.save(category: newCategory);
+            
+            self.Folders?.append(newCategory);
+            self.MainTableView.reloadData();
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
     
 
     
-    var Folders : [Category]?;
-    
-    var FoldersFiltered:[Category]?;
-    
-    let searchController = UISearchController(searchResultsController: nil);
     
     override func viewDidLoad()
     {
@@ -91,6 +117,7 @@ class FolderTableViewController : UITableViewController  {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let selectedFolder = Folders?[indexPath.row];
+        
         
         let backItem = UIBarButtonItem()
         backItem.title = "Zurück"

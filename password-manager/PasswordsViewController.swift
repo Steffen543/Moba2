@@ -95,15 +95,15 @@ class PasswordsViewController : UITableViewController{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        /*let selectedFolder = Folders?[indexPath.row];
+        let selectedPassword = Passwords?[indexPath.row];
         
         
         let backItem = UIBarButtonItem()
         backItem.title = "Zurück"
         navigationItem.backBarButtonItem = backItem
         
-        let destinationVC = PasswordsViewController()
-        destinationVC.SelectedFolder = selectedFolder
+        let destinationVC = ShowPasswordController()
+        destinationVC.SelectedPassword = selectedPassword
         
         
         //destinationVC.performSegue(withIdentifier: "showPasswordsSegue", sender: self)
@@ -114,7 +114,7 @@ class PasswordsViewController : UITableViewController{
          
          
          
-         */
+        
         
     }
     

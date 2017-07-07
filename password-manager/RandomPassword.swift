@@ -10,7 +10,7 @@ import Foundation
 
 
 //https://stackoverflow.com/questions/41730933/random-password-generator-swift-3
-class RandomPassword
+public class RandomPassword
 {
     //all characters which are allowed for generating a password will be append here
     var allowedCharacters = Array<Character>();

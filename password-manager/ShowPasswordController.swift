@@ -21,12 +21,31 @@ class ShowPasswordController : UIViewController{
     @IBOutlet var LabelUsername: UILabel!
     @IBOutlet var LabelEdited: UILabel!
     @IBOutlet var LabelAdded: UILabel!
+    @IBOutlet var LabelImage: UILabel!
+    @IBOutlet var ButtonCopy: UIButton!
+    @IBOutlet var ButtonShow: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //title = SelectedPassword?.name;
         
         print("Opening password with name \(SelectedPassword?.name)");
+        
+        LabelImage.FAIcon = .FALock;
+        LabelImage.setFAIcon(icon: .FALock, iconSize: 65);
+        LabelDescription.lineBreakMode = .byWordWrapping;
+        LabelDescription.numberOfLines = 0;
+        
+        
+        ButtonCopy.setFAIcon(icon: .FAClipboard, iconSize: 35, forState: .normal);
+        ButtonShow.setFAIcon(icon: .FAEye, iconSize: 35, forState: .normal)
+        
+   
+        //ButtonShow.setFAText(prefixText: "", icon: .FAEye, postfixText: " Anzeigen", size: 35, forState: .normal)
+        //ButtonCopy.setFAText(prefixText: "", icon: .FAClipboard, postfixText: " Kopieren", size: 35, forState: .normal)
+        //ButtonCopy.tintColor = UIView().tintColor;
+        
         
         
         

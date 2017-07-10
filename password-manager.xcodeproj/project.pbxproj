@@ -13,8 +13,8 @@
 		7285C04B1F13A88800946F26 /* FirstLaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285C04A1F13A88800946F26 /* FirstLaunchController.swift */; };
 		7285C04D1F13B48900946F26 /* GeneralHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285C04C1F13B48900946F26 /* GeneralHelper.swift */; };
 		7285C0501F13C35100946F26 /* FAIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285C04F1F13C35100946F26 /* FAIcon.swift */; };
-		7285C0521F13C38300946F26 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7285C0511F13C38300946F26 /* FontAwesome.ttf */; };
 		7285C0541F13CC5D00946F26 /* ShowPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285C0531F13CC5D00946F26 /* ShowPasswordController.swift */; };
+		7285C0561F13CD3E00946F26 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7285C0551F13CD3E00946F26 /* FontAwesome.ttf */; };
 		729171631F0BA8330036D53E /* DBPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729171621F0BA8330036D53E /* DBPasswordManager.swift */; };
 		729171651F0BC96D0036D53E /* DBCategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729171641F0BC96D0036D53E /* DBCategoryManager.swift */; };
 		B30389D31F0A5847007747A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30389D21F0A5847007747A8 /* AppDelegate.swift */; };
@@ -55,8 +55,8 @@
 		7285C04A1F13A88800946F26 /* FirstLaunchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchController.swift; sourceTree = "<group>"; };
 		7285C04C1F13B48900946F26 /* GeneralHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralHelper.swift; sourceTree = "<group>"; };
 		7285C04F1F13C35100946F26 /* FAIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAIcon.swift; sourceTree = "<group>"; };
-		7285C0511F13C38300946F26 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = ../../../Downloads/FontAwesome.ttf; sourceTree = "<group>"; };
 		7285C0531F13CC5D00946F26 /* ShowPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPasswordController.swift; sourceTree = "<group>"; };
+		7285C0551F13CD3E00946F26 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		729171621F0BA8330036D53E /* DBPasswordManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPasswordManager.swift; sourceTree = "<group>"; };
 		729171641F0BC96D0036D53E /* DBCategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBCategoryManager.swift; sourceTree = "<group>"; };
 		B30389CF1F0A5847007747A8 /* password-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "password-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +116,7 @@
 		7285C04E1F13C30B00946F26 /* FontAwesome */ = {
 			isa = PBXGroup;
 			children = (
-				7285C0511F13C38300946F26 /* FontAwesome.ttf */,
+				7285C0551F13CD3E00946F26 /* FontAwesome.ttf */,
 				7285C04F1F13C35100946F26 /* FAIcon.swift */,
 			);
 			name = FontAwesome;
@@ -314,9 +314,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30389E01F0A5847007747A8 /* LaunchScreen.storyboard in Resources */,
+				7285C0561F13CD3E00946F26 /* FontAwesome.ttf in Resources */,
 				B30389DD1F0A5847007747A8 /* Assets.xcassets in Resources */,
 				B30389D81F0A5847007747A8 /* Main.storyboard in Resources */,
-				7285C0521F13C38300946F26 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

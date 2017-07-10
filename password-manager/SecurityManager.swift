@@ -61,12 +61,46 @@ class SecurityManager
     }
     
     //checks if the given password has upper and also lower case letters
-    public static func hasUpperAndLowercaseLetters(password: String) -> Bool {
+    public static func hasUpperAndLowercase(password: String) -> Bool {
         var hasUpperCase = false;
         var hasLowerCase = false;
         
+        for index in password.characters.indices {
+            let letter = String(password[index]);
+            
+            if letter.lowercased() == letter {
+                hasLowerCase = true;
+            } else {
+                hasUpperCase = true;
+            }
+        }
         
-        return true;
+        return (hasUpperCase && hasLowerCase);
+    }
+    
+    //checks if a given string has numbers
+    public static func hasNumbers(password: String) -> Bool {
+        var hasNumbers = false;
+        
+        for index in password.characters.indices {
+            let letter = String(password[index]);
+            let numVal = Int(letter);
+            
+            if (numVal != nil) {
+                hasNumbers = true;
+            }
+        }
+        
+        return hasNumbers;
+    }
+    
+    public static func isInTop1000(password: String) -> Bool {
+        return false;
+    }
+    
+    public static func hasSpecialCharacters(password: String) -> Bool {
+        let characterset = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+        return (password.rangeOfCharacter(from: characterset.inverted) != nil)
     }
 }
 

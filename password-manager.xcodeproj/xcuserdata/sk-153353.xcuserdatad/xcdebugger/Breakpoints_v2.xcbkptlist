@@ -306,13 +306,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "password-manager/ShowPasswordController.swift"
-            timestampString = "521380124.766979"
+            timestampString = "521389753.567169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "viewWillDisappear(_:)"
-            landmarkType = "7">
+            startingLineNumber = "154"
+            endingLineNumber = "154">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

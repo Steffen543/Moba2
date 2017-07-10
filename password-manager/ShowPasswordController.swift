@@ -2,36 +2,66 @@
 //  ShowPasswordController.swift
 //  password-manager
 //
-//  Created by sk-153353 on 07.07.17.
+//  Created by sk-153353 on 10.07.17.
 //  Copyright © 2017 sk-ed. All rights reserved.
 //
 
 import Foundation
-import UIKit;
+import UIKit
 
 class ShowPasswordController : UIViewController{
     
     public var SelectedPassword : Password?;
-    @IBOutlet weak var TextFieldName: UITextField!
-    @IBOutlet weak var TextFieldEmail: UITextField!
-    @IBOutlet weak var LabelAdded: UILabel!
-    @IBOutlet weak var TextFieldDescription: UITextView!
-    @IBOutlet weak var TextFieldUsername: UITextField!
-    @IBOutlet weak var TextFieldPassword: UITextField!
-    @IBOutlet weak var LabelEdited: UILabel!
-    @IBOutlet weak var ButtonShowPassword: UIButton!
+    var passwordIsVisible : Bool?;
     
-
+    @IBOutlet var LabelDescription: UILabel!
+    @IBOutlet var LabelName: UILabel!
+    @IBOutlet var LabelPassword: UILabel!
+    @IBOutlet var LabelEmail: UILabel!
+    @IBOutlet var LabelUsername: UILabel!
+    @IBOutlet var LabelEdited: UILabel!
+    @IBOutlet var LabelAdded: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = SelectedPassword?.name;
+        //title = SelectedPassword?.name;
+        
+        print("Opening password with name \(SelectedPassword?.name)");
         
         
-        TextFieldName.text = SelectedPassword?.name;
-        TextFieldEmail.text = SelectedPassword?.mail;
-        TextFieldPassword.text = SelectedPassword?.password;
-        TextFieldUsername.text = SelectedPassword?.username;
-        TextFieldDescription.text = SelectedPassword?.descriptionText;
+        
+       // ViewPasswordIcon.layer.cornerRadius = 10;
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        LabelName.text = SelectedPassword?.name;
+        LabelDescription.text = SelectedPassword?.descriptionText;
+        
+        
+        if(SelectedPassword?.password != "" || SelectedPassword?.password != nil) {
+            LabelPassword.text = "**********"
+            passwordIsVisible = false;
+        }
+        
+        
+        
+        LabelEmail.text = SelectedPassword?.mail;
+        LabelUsername.text = SelectedPassword?.username;
+        
+        
+        
+        if(LabelDescription.text == "" || LabelDescription.text == nil) {
+            LabelDescription.text = "Keine Beschreibung";
+        }
+        if(LabelPassword.text == "" || LabelPassword.text == nil) {
+            LabelPassword.text = "Kein Passwort";
+        }
+        if(LabelEmail.text == "" || LabelEmail.text == nil)  {
+            LabelEmail.text = "Keine Email";
+        }
+        if(LabelUsername.text == ""  || LabelUsername.text == nil) {
+            LabelUsername.text = "Kein Benutzername";
+        }
         
         let dateFormatter = DateFormatter();
         dateFormatter.dateFormat = "dd.MM.YYYY hh:mm";
@@ -40,47 +70,37 @@ class ShowPasswordController : UIViewController{
         
         LabelAdded.text = "Hinzugefügt am \(addedString)";
         LabelEdited.text = "Bearbeitet am \(editedString)";
-       
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        let newName = TextFieldName.text;
-        
-        if (newName?.isEmpty)! {
-            print("new name is empty, password will not be saved")
-            return;
-        }
-        
-        SelectedPassword?.name = TextFieldName.text;
-        SelectedPassword?.mail = TextFieldEmail.text;
-        SelectedPassword?.username = TextFieldUsername.text;
-        SelectedPassword?.password = TextFieldPassword.text;
-        SelectedPassword?.descriptionText = TextFieldDescription.text;
-        SelectedPassword?.editDate = NSDate();
-        
-        let Manager = DBPasswordManager();
-
-        Manager.save(password: SelectedPassword!)
     }
     
     
-    @IBAction func showPasswordButtonClicked(_ sender: Any) {
-        if (TextFieldPassword.isSecureTextEntry) {
-            TextFieldPassword.isSecureTextEntry = false;
-            ButtonShowPassword.setTitle("Verbergen", for: .normal)
+    @IBAction func ButtonShowPasswordClick(_ sender: UIButton) {
+        if(passwordIsVisible)! {
+            LabelPassword.text = "**********"
+            passwordIsVisible = false;
         } else {
-            TextFieldPassword.isSecureTextEntry = true;
-            ButtonShowPassword.setTitle("Anzeigen", for: .normal)
-
+            LabelPassword.text = SelectedPassword?.password;
+            passwordIsVisible = true;
         }
     }
     
-    @IBAction func copyPasswordButtonClicked(_ sender: Any) {
-        UIPasteboard.general.string = TextFieldPassword.text;
+    @IBAction func ButtonCopyPasswordClick(_ sender: UIButton) {
+        UIPasteboard.general.string = SelectedPassword?.password;
     }
+  
     
-    @IBAction func generatePasswordButtonClicked(_ sender: Any) {
+    @IBAction func ButtonEditClick(_ sender: Any) {
+       
+
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let newController = storyBoard.instantiateViewController(withIdentifier: "EditPasswordController");
+        
+        // get the nav controller
+        let navController = newController as! UINavigationController;
+        // get the view controller from the nav controller
+        let viewController = navController.topViewController as!EditPasswordController;
+        viewController.SelectedPassword = SelectedPassword;
+        navigationController?.pushViewController(viewController, animated: true)
+
     }
-    
     
 }

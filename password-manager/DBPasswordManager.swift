@@ -58,7 +58,7 @@ class DBPasswordManager
             //let hashKey = String(password.id.hashValue);
             SecurityManager.setPasscode(identifier: String(password.id), passcode: password.password!);
             print("Saving password width ID\(password.id) and Password: \(password.password)");
-            password.password = String(password.id);
+            //password.password = String(password.id);
             password.editDate = NSDate();
             
             //persisting the password

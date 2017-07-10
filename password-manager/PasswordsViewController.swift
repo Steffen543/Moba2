@@ -24,12 +24,20 @@ class PasswordsViewController : UITableViewController{
         
         
         title = SelectedFolder?.name;
-        let Manager = DBPasswordManager();
-        Passwords = Manager.load(categoryId: (SelectedFolder?.id)!)
+        
+        
         definesPresentationContext = true
-        print(Passwords?.count);
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("view will appear");
+        let Manager = DBPasswordManager();
+        Passwords = Manager.load(categoryId: (SelectedFolder?.id)!)
+        MainTableView.reloadData()
+        print(Passwords?.count);
+    }
+
     
     @IBAction func AddButtonClick(_ sender: Any) {
         let alert = UIAlertController(title: "Passwort hinzufügen", message: "Geben Sie einen Namen ein", preferredStyle: .alert)
@@ -51,6 +59,8 @@ class PasswordsViewController : UITableViewController{
             newPassword.name = text;
             newPassword.password = "";
             newPassword.categoryId = (self.SelectedFolder?.id)!;
+            newPassword.createDate = NSDate();
+            newPassword.editDate = NSDate();
             
             Manager.save(password: newPassword);
             
@@ -102,22 +112,24 @@ class PasswordsViewController : UITableViewController{
         backItem.title = "Zurück"
         navigationItem.backBarButtonItem = backItem
         
+        /*
         let destinationVC = ShowPasswordController()
         destinationVC.SelectedPassword = selectedPassword
         
         
         //destinationVC.performSegue(withIdentifier: "showPasswordsSegue", sender: self)
         navigationController?.pushViewController(destinationVC, animated: true)
+         */
         
-         
-         
-         
-         
-         
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let newController = storyBoard.instantiateViewController(withIdentifier: "ShowPasswordController");
         
-        
+        // get the nav controller
+        let navController = newController as! UINavigationController;
+        // get the view controller from the nav controller
+        let viewController = navController.topViewController as!ShowPasswordController;
+        viewController.SelectedPassword = selectedPassword;
+        navigationController?.pushViewController(viewController, animated: true)
     }
-    
-    
-    
+ 
 }

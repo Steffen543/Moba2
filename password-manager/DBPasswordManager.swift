@@ -37,6 +37,8 @@ class DBPasswordManager
             
             newPassword = Password(context: ManagedContext);
             newPassword!.id = fetchResult.count + 1
+            newPassword?.createDate = NSDate();
+            newPassword?.editDate = NSDate();
         }
         catch let error as NSError
         {
@@ -53,9 +55,11 @@ class DBPasswordManager
         do {
             
             //the password will now be saved in the keychain. the SQLite database ist not encrypted
-            let hashKey = String(password.id.hashValue);
-            SecurityManager.setPasscode(identifier: hashKey, passcode: password.password!);
-            password.password = hashKey;
+            //let hashKey = String(password.id.hashValue);
+            SecurityManager.setPasscode(identifier: String(password.id), passcode: password.password!);
+            print("Saving password width ID\(password.id) and Password: \(password.password)");
+            //password.password = String(password.id);
+            password.editDate = NSDate();
             
             //persisting the password
             try ManagedContext.save()
@@ -79,6 +83,10 @@ class DBPasswordManager
             
             fetchResult = try ManagedContext.fetch(fetchRequest) as! [Password]
             result = fetchResult.first
+            result?.password = SecurityManager.getPasscode(identifier: String(passwordId))
+            
+            print("loading password width ID \(result?.id) and Password: \(result?.password)");
+
         }
         catch let error as NSError
         {
@@ -100,6 +108,16 @@ class DBPasswordManager
             fetchRequest.predicate = NSPredicate(format: "categoryId = %@", NSNumber(value: categoryId))
             
             fetchResult = try ManagedContext.fetch(fetchRequest) as! [Password]
+            
+            
+            for pwd in fetchResult
+            {
+                pwd.password = SecurityManager.getPasscode(identifier: String(pwd.id))
+
+            
+            }
+            
+            
         }
         catch let error as NSError
         {

@@ -73,6 +73,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="onMasterFieldEditEnd" destination="oAb-Ae-x0l" eventType="editingDidEnd" id="F9Z-2Z-q5L"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="90x-DP-jJQ">
                                 <rect key="frame" x="16" y="287" width="343" height="30"/>
@@ -80,6 +83,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="onMasterRepeatFieldEditEnd" destination="oAb-Ae-x0l" eventType="editingDidEnd" id="LFt-5T-SF9"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Masterpasswort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxh-1N-Y1Z">
                                 <rect key="frame" x="16" y="187" width="137" height="21"/>
@@ -253,7 +259,7 @@
             <objects>
                 <navigationController storyboardIdentifier="FolderViewController" automaticallyAdjustsScrollViewInsets="NO" id="g34-cD-zVh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yri-MP-1pw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yri-MP-1pw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -271,7 +277,7 @@
             <objects>
                 <navigationController storyboardIdentifier="PasswordsViewController" automaticallyAdjustsScrollViewInsets="NO" id="EJC-Nd-f7f" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cK6-ie-dPg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cK6-ie-dPg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -289,7 +295,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rsc-Vf-wiX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8kr-Tf-nDl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8kr-Tf-nDl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

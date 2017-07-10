@@ -18,10 +18,14 @@ class FirstLaunchController : UIViewController{
     @IBOutlet weak var MaterPasswordRepeatField: UITextField!;
     
     override func viewDidLoad() {
-        MasterPasswordField.rightViewMode = UITextFieldViewMode.unlessEditing;
-        MasterPasswordField.rightView = MasterPasswordField;
+        MasterPasswordField.setRightViewFAIcon(icon: .FAExclamationCircle, rightViewMode: .unlessEditing, textColor: .red);
     }
     
+    @IBAction func onMasterFieldEditEnd() {
+    }
+    
+    @IBAction func onMasterRepeatFieldEditEnd() {
+    }
     
     @IBAction func onMasterSet() {
         

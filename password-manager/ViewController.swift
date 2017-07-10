@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             self.present(newController, animated: true, completion: nil);
         }
         else {
-            GeneralHelper.shakeField(field: passwordTextField);
+            GeneralHelper.shakeElement(field: passwordTextField);
         }
     }
 }

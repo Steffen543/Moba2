@@ -11,7 +11,7 @@ import UIKit
 
 class GeneralHelper {
     //https://stackoverflow.com/questions/27987048/shake-animation-for-uitextfield-uiview-in-swift
-    public static func shakeField(field: UITextField) {
+    public static func shakeElement(field: UIView) {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.duration = 0.6

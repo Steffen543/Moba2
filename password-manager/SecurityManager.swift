@@ -59,6 +59,14 @@ class SecurityManager
         }
         return passcode
     }
+    
+    //checks if the given password has upper and also lower case letters
+    public static func hasUpperAndLowercaseLetters(password: String) -> Bool {
+        var hasUpperCase = false;
+        var hasLowerCase = false;
+        
+        return true;
+    }
 }
 
 

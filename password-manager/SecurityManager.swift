@@ -65,6 +65,7 @@ class SecurityManager
         var hasUpperCase = false;
         var hasLowerCase = false;
         
+        
         return true;
     }
 }

@@ -14,25 +14,16 @@ class ViewController: UIViewController {
     //MARK: Properties
     @IBOutlet weak var passwordTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        
-
-        let password = RandomPassword();
-
-        password.useLowerCase();
-        password.useUpperCase();
-        password.useNumbers();
-        password.useSpeciaCharaters();
-        
-        let passwordString = password.getPassword(length: 16);
-        print("Passwort: \(passwordString)");
-        SecurityManager.setPasscode(identifier: "root", passcode: passwordString);
-        
-        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //check if this is the first launch. Redirect if true for master passwort generation
+        let masterPasswordIsSet = UserDefaults.standard.bool(forKey: "MasterPasswordIsSet")
+        if !masterPasswordIsSet {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+            let newController = storyBoard.instantiateViewController(withIdentifier: "FirstLaunchController");
+            
+            self.present(newController, animated: true, completion: nil);
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,15 +34,16 @@ class ViewController: UIViewController {
     
     @IBAction func login(_ sender: UIButton) {
         
-        let password = passwordTextField.text;
-        if (password != SecurityManager.getPasscode(identifier: "root")){
-            print("PASSWORT NICHT OK");
+        let password = String(passwordTextField.text!.hashValue);
+        if (password == SecurityManager.getPasscode(identifier: "master")){
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+            let newController = storyBoard.instantiateViewController(withIdentifier: "FolderViewController");
+            
+            self.present(newController, animated: true, completion: nil);
         }
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
-        let newController = storyBoard.instantiateViewController(withIdentifier: "FolderViewController");
-        self.present(newController, animated: true, completion: nil);
+        else {
+            GeneralHelper.shakeElement(field: passwordTextField);
+        }
     }
-
 }
 

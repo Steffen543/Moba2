@@ -39,6 +39,8 @@ class FolderTableViewController : UITableViewController  {
             let newCategory = Manager.getNewObject();
             
             newCategory.name = text;
+            newCategory.createDate = NSDate();
+            newCategory.editDate = NSDate();
             
             Manager.save(category: newCategory);
             

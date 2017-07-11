@@ -45,11 +45,7 @@ class ShowPasswordController : UIViewController{
         //ButtonShow.setFAText(prefixText: "", icon: .FAEye, postfixText: " Anzeigen", size: 35, forState: .normal)
         //ButtonCopy.setFAText(prefixText: "", icon: .FAClipboard, postfixText: " Kopieren", size: 35, forState: .normal)
         //ButtonCopy.tintColor = UIView().tintColor;
-        
-        
-        
-        
-       // ViewPasswordIcon.layer.cornerRadius = 10;
+
     }
 
     override func viewWillAppear(_ animated: Bool) {

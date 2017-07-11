@@ -133,54 +133,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "password-manager/PasswordsViewController.swift"
-            timestampString = "521127937.988233"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "password_manager.PasswordsViewController.viewDidLoad () -&gt; ()"
-                  moduleName = "password-manager"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/PasswordsViewController.swift"
-                  timestampString = "521123540.561989"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "1060">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "password_manager.PasswordsViewController.viewDidLoad () -&gt; ()"
-                  moduleName = "password-manager"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sk-153353/Documents/Moba2/Moba2/password-manager/PasswordsViewController.swift"
-                  timestampString = "521123540.563744"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "1800">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "password-manager/PasswordsViewController.swift"
             timestampString = "521126421.224753"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -274,11 +226,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "password-manager/PasswordsViewController.swift"
-            timestampString = "521379721.210525"
+            timestampString = "521465904.412902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "AddButtonClick(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -306,11 +258,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "password-manager/ShowPasswordController.swift"
-            timestampString = "521394266.364383"
+            timestampString = "521465646.143405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172">
+            startingLineNumber = "168"
+            endingLineNumber = "168">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -326,6 +278,22 @@
             startingLineNumber = "59"
             endingLineNumber = "59"
             landmarkName = "save(password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "password-manager/GeneratePasswordViewController.swift"
+            timestampString = "521470499.897681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

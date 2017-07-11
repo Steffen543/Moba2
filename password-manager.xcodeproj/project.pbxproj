@@ -29,6 +29,8 @@
 		B32F46E71F0A78810040A286 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32F46E61F0A78810040A286 /* MainViewController.swift */; };
 		B32F46EB1F0A897F0040A286 /* FolderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32F46EA1F0A897F0040A286 /* FolderTableViewController.swift */; };
 		B359B8761F0BC3270094346B /* PasswordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359B8751F0BC3270094346B /* PasswordsViewController.swift */; };
+		B36FC37F1F14E7A000365CAE /* EditFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FC37E1F14E7A000365CAE /* EditFolderViewController.swift */; };
+		B36FC3811F14F5B800365CAE /* GeneratePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FC3801F14F5B800365CAE /* GeneratePasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		B32F46E61F0A78810040A286 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B32F46EA1F0A897F0040A286 /* FolderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTableViewController.swift; sourceTree = "<group>"; };
 		B359B8751F0BC3270094346B /* PasswordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordsViewController.swift; sourceTree = "<group>"; };
+		B36FC37E1F14E7A000365CAE /* EditFolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFolderViewController.swift; sourceTree = "<group>"; };
+		B36FC3801F14F5B800365CAE /* GeneratePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratePasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,8 @@
 				B359B8751F0BC3270094346B /* PasswordsViewController.swift */,
 				B326A0201F0FCA43006412CC /* EditPasswordController.swift */,
 				7285C04A1F13A88800946F26 /* FirstLaunchController.swift */,
+				B36FC37E1F14E7A000365CAE /* EditFolderViewController.swift */,
+				B36FC3801F14F5B800365CAE /* GeneratePasswordViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 			files = (
 				B30389D51F0A5847007747A8 /* ViewController.swift in Sources */,
 				729171651F0BC96D0036D53E /* DBCategoryManager.swift in Sources */,
+				B36FC3811F14F5B800365CAE /* GeneratePasswordViewController.swift in Sources */,
 				7267E5B31F0FCD350057DC4C /* RandomPassword.swift in Sources */,
 				B359B8761F0BC3270094346B /* PasswordsViewController.swift in Sources */,
 				B30389DB1F0A5847007747A8 /* password_manager.xcdatamodeld in Sources */,
@@ -351,6 +358,7 @@
 				B326A0211F0FCA43006412CC /* EditPasswordController.swift in Sources */,
 				7267E5B01F0FB18D0057DC4C /* SecurityManager.swift in Sources */,
 				7285C04D1F13B48900946F26 /* GeneralHelper.swift in Sources */,
+				B36FC37F1F14E7A000365CAE /* EditFolderViewController.swift in Sources */,
 				B32F46EB1F0A897F0040A286 /* FolderTableViewController.swift in Sources */,
 				B30389D31F0A5847007747A8 /* AppDelegate.swift in Sources */,
 				B32F46E71F0A78810040A286 /* MainViewController.swift in Sources */,

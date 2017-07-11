@@ -21,9 +21,8 @@ class EditPasswordController : UIViewController{
     @IBOutlet weak var LabelEdited: UILabel!
     @IBOutlet weak var ButtonShowPassword: UIButton!
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewWillAppear(_ animated: Bool) {
         title = SelectedPassword?.name;
         
         
@@ -40,10 +39,15 @@ class EditPasswordController : UIViewController{
         
         LabelAdded.text = "Hinzugefügt am \(addedString)";
         LabelEdited.text = "Bearbeitet am \(editedString)";
-       
+
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    @IBAction func ButtonSaveClicked(_ sender: Any) {
         let newName = TextFieldName.text;
         
         if (newName?.isEmpty)! {
@@ -59,10 +63,21 @@ class EditPasswordController : UIViewController{
         SelectedPassword?.editDate = NSDate();
         
         let Manager = DBPasswordManager();
-
+        
         Manager.save(password: SelectedPassword!)
     }
     
+    @IBAction func ButtonDeleteClicked(_ sender: Any) {
+        let refreshAlert = UIAlertController(title: "Bestätigen", message: "Eintrag wirklich löschen?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ja", style: .default, handler: { (action: UIAlertAction!) in
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: { (action: UIAlertAction!) in
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
+    }
     
     @IBAction func showPasswordButtonClicked(_ sender: Any) {
         if (TextFieldPassword.isSecureTextEntry) {
@@ -80,7 +95,21 @@ class EditPasswordController : UIViewController{
     }
     
     @IBAction func generatePasswordButtonClicked(_ sender: Any) {
+
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let newController = storyBoard.instantiateViewController(withIdentifier: "GeneratePasswordView");
+        
+        // get the nav controller
+        let navController = newController as! UINavigationController;
+        // get the view controller from the nav controller
+        let viewController = navController.topViewController as!GeneratePasswordViewController;
+        viewController.SelectedPassword = SelectedPassword;
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     
 }
+
+
+

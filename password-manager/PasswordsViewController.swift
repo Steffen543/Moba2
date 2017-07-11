@@ -14,28 +14,50 @@ class PasswordsViewController : UITableViewController{
     public var SelectedFolder : Category?;
     var Passwords : [Password]?;
     @IBOutlet var MainTableView: UITableView!
+    @IBOutlet var LabelDescription: UILabel!
  
     
     
+    @IBAction func EditFolderButtonClicked(_ sender: Any) {
+
+        let backItem = UIBarButtonItem()
+        backItem.title = "Zurück"
+        navigationItem.backBarButtonItem = backItem
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let newController = storyBoard.instantiateViewController(withIdentifier: "EditFolderViewController");
+        
+        // get the nav controller
+        let navController = newController as! UINavigationController;
+        // get the view controller from the nav controller
+        let viewController = navController.topViewController as!EditFolderViewController;
+        viewController.SelectedFolder = SelectedFolder;
+        navigationController?.pushViewController(viewController, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "PasswordCell")
-        
-        
-        title = SelectedFolder?.name;
-        
-        
-        definesPresentationContext = true
-        
+ 
     }
     
+   
     override func viewWillAppear(_ animated: Bool) {
         print("view will appear");
         let Manager = DBPasswordManager();
         Passwords = Manager.load(categoryId: (SelectedFolder?.id)!)
         MainTableView.reloadData()
-        print(Passwords?.count);
+
+        
+        title = SelectedFolder?.name;
+        LabelDescription.text = SelectedFolder?.descriptionText;
+        if(LabelDescription.text == "" || LabelDescription.text == nil)
+        {
+            LabelDescription.text = "Keine Beschreibung";
+        }
+        LabelDescription.lineBreakMode = .byWordWrapping;
+        LabelDescription.numberOfLines = 0;
+
+        
     }
 
     
@@ -111,16 +133,7 @@ class PasswordsViewController : UITableViewController{
         let backItem = UIBarButtonItem()
         backItem.title = "Zurück"
         navigationItem.backBarButtonItem = backItem
-        
-        /*
-        let destinationVC = ShowPasswordController()
-        destinationVC.SelectedPassword = selectedPassword
-        
-        
-        //destinationVC.performSegue(withIdentifier: "showPasswordsSegue", sender: self)
-        navigationController?.pushViewController(destinationVC, animated: true)
-         */
-        
+
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
         let newController = storyBoard.instantiateViewController(withIdentifier: "ShowPasswordController");
         

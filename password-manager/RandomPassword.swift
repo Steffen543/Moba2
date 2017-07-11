@@ -17,27 +17,35 @@ public class RandomPassword
     
     
     //the password will now made use of lower case letters
-    public func useLowerCase()
+    public func useLowerCase(_ use: Bool)
     {
-        allowedCharacters += Array("abcdefghijklmnopqrstuvwxyz".characters);
+        if(use) {
+            allowedCharacters += Array("abcdefghijklmnopqrstuvwxyz".characters);
+        }
     }
     
     //the password will now made use of upper case letters
-    public func useUpperCase()
+    public func useUpperCase(_ use: Bool)
     {
-        allowedCharacters += Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ".characters);
+        if(use) {
+            allowedCharacters += Array("ABCDEFGHIJKLMNOPQRSTUVWXYZ".characters);
+        }
     }
     
     //the password will now made use of numbers
-    public func useNumbers()
+    public func useNumbers(_ use: Bool)
     {
-        allowedCharacters += Array("1234567890".characters);
+        if(use) {
+            allowedCharacters += Array("1234567890".characters);
+        }
     }
     
     //the password will now made use of special charaters
-    public func useSpeciaCharaters()
+    public func useSpeciaCharaters(_ use: Bool)
     {
-        allowedCharacters += Array("!\"\\$%&/()=?[]{}*+#'-_.:,;".characters);
+        if(use) {
+            allowedCharacters += Array("!\"\\$%&/()=?[]{}*+#'-_.:,;".characters);
+        }
     }
     
     //generates finally the password

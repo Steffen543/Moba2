@@ -129,6 +129,7 @@ class DBPasswordManager
     //removes password from the database
     func delete(password: Password) {
         ManagedContext.delete(password);
+        save(password: password);
     }
 }
 

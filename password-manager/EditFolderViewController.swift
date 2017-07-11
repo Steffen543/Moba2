@@ -42,5 +42,31 @@ class EditFolderViewController : UIViewController{
         
     }
     
+    func backTwo() {
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
+    }
+    
+    @IBAction func ButtonDeleteFolderClicked(_ sender: Any) {
+        let refreshAlert = UIAlertController(title: "Bestätigen", message: "Eintrag wirklich löschen?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ja", style: .default, handler: { (action: UIAlertAction!) in
+            
+            let Manager = DBCategoryManager();
+            print("deleting category with id \(self.SelectedFolder?.id)");
+            Manager.delete(category: self.SelectedFolder!);
+            self.backTwo();
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: { (action: UIAlertAction!) in
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
 
+    }
+    
+    
+    
+    
+    
 }

@@ -57,6 +57,11 @@ class ShowPasswordController : UIViewController{
             LabelPassword.text = "**********"
             passwordIsVisible = false;
         }
+        if(SelectedPassword?.password == "" || SelectedPassword?.password == nil){
+            LabelPassword.text = "Kein Passwort"
+            passwordIsVisible = false;
+        }
+
         
         
         
@@ -90,10 +95,24 @@ class ShowPasswordController : UIViewController{
     
     @IBAction func ButtonShowPasswordClick(_ sender: UIButton) {
         if(passwordIsVisible)! {
-            LabelPassword.text = "**********"
+            
+            if(SelectedPassword?.password == "" || SelectedPassword?.password == nil){
+                LabelPassword.text = "Kein Passwort"
+            } else {
+                LabelPassword.text = "**********"
+            }
+            
+            
             passwordIsVisible = false;
         } else {
-            LabelPassword.text = SelectedPassword?.password;
+            
+            if(SelectedPassword?.password == "" || SelectedPassword?.password == nil){
+                LabelPassword.text = "Kein Passwort"
+            } else {
+                LabelPassword.text = SelectedPassword?.password;
+            }
+            
+            
             passwordIsVisible = true;
         }
     }

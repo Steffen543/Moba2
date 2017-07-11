@@ -126,7 +126,7 @@ class DBPasswordManager
     }
     
     
-    //removes a category and all included passwords from the database
+    //removes password from the database
     func delete(password: Password) {
         ManagedContext.delete(password);
     }

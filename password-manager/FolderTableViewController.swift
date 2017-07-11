@@ -51,15 +51,22 @@ class FolderTableViewController : UITableViewController  {
     }
     
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        
+        let categoryManager = DBCategoryManager();
+        Folders = categoryManager.loadAll();
+        MainTableView.reloadData();
+    }
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad();
         
+        
         let categoryManager = DBCategoryManager();
         Folders = categoryManager.loadAll();
-        
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true

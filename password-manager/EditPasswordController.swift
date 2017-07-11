@@ -67,10 +67,20 @@ class EditPasswordController : UIViewController{
         Manager.save(password: SelectedPassword!)
     }
     
+    func backTwo() {
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
+    }
+    
     @IBAction func ButtonDeleteClicked(_ sender: Any) {
         let refreshAlert = UIAlertController(title: "Bestätigen", message: "Eintrag wirklich löschen?", preferredStyle: UIAlertControllerStyle.alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Ja", style: .default, handler: { (action: UIAlertAction!) in
+            
+            let Manager = DBPasswordManager();
+            print("deleting password with id \(self.SelectedPassword?.id)");
+            Manager.delete(password: self.SelectedPassword!);
+            self.backTwo();
         }))
         
         refreshAlert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: { (action: UIAlertAction!) in

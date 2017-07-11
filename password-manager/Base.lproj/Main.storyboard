@@ -182,18 +182,18 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pxt-JX-c3z" id="z8t-RQ-YWm">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hZB-oa-cD1">
-                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Zk-DI-aZd">
-                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -236,8 +236,8 @@ Eine Zahl ODER ein Sonderzeichen</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qAj-R6-jGh">
-                                <rect key="frame" x="16" y="86" width="343" height="211"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qAj-R6-jGh">
+                                <rect key="frame" x="16" y="86" width="343" height="256"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kn7-Mb-EwF">
@@ -290,6 +290,13 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJ6-8g-0rW">
+                                        <rect key="frame" x="0.0" y="226" width="343" height="30"/>
+                                        <state key="normal" title="Löschen"/>
+                                        <connections>
+                                            <action selector="ButtonDeleteFolderClicked:" destination="wpR-7R-Tgg" eventType="touchUpInside" id="ADS-tH-xz1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -337,18 +344,18 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lnL-sQ-8VZ" id="IAZ-lQ-ijs">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tOJ-th-jET">
-                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jjD-hb-cSW">
-                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -580,16 +587,16 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                 <rect key="frame" x="16" y="87" width="343" height="364"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a8p-gm-6zN">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Länge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRb-ZY-Fq9">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="4" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-6q-cG8">
-                                                <rect key="frame" x="-2" y="20.5" width="347" height="31"/>
+                                                <rect key="frame" x="-2" y="21" width="347" height="31"/>
                                                 <connections>
                                                     <action selector="SliderLengthValueChanged:" destination="AdJ-U7-uDC" eventType="valueChanged" id="lI0-tA-o3O"/>
                                                 </connections>
@@ -597,7 +604,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgf-vS-FJK">
-                                        <rect key="frame" x="0.0" y="65.5" width="343" height="31"/>
+                                        <rect key="frame" x="0.0" y="66" width="343" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Großbuchstaben" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XD2-dH-sab">
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="31"/>
@@ -611,7 +618,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pW0-0F-xpm">
-                                        <rect key="frame" x="0.0" y="111.5" width="343" height="31"/>
+                                        <rect key="frame" x="0.0" y="112" width="343" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kleinbuchstaben" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAL-lv-BrY">
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="31"/>
@@ -625,7 +632,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nq0-mk-efa">
-                                        <rect key="frame" x="0.0" y="157.5" width="343" height="31"/>
+                                        <rect key="frame" x="0.0" y="158" width="343" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zahlen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdP-nF-WvU">
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="31"/>
@@ -639,7 +646,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUa-64-tye">
-                                        <rect key="frame" x="0.0" y="203.5" width="343" height="31"/>
+                                        <rect key="frame" x="0.0" y="204" width="343" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sonderzeichen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPl-oK-fxG">
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="31"/>
@@ -653,20 +660,20 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxe-Ei-vYf">
-                                        <rect key="frame" x="0.0" y="249.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="250" width="343" height="30"/>
                                         <state key="normal" title="Generieren"/>
                                         <connections>
                                             <action selector="ButtonGeneratePasswordClicked:" destination="AdJ-U7-uDC" eventType="touchUpInside" id="Map-7m-mxQ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDi-lT-3Bw">
-                                        <rect key="frame" x="0.0" y="294.5" width="343" height="24"/>
+                                        <rect key="frame" x="0.0" y="295" width="343" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0p-fc-CqE">
-                                        <rect key="frame" x="0.0" y="333.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="334" width="343" height="30"/>
                                         <state key="normal" title="Übernehmen"/>
                                         <connections>
                                             <action selector="ButtonTakeClicked:" destination="AdJ-U7-uDC" eventType="touchUpInside" id="JTe-TC-KG6"/>
@@ -711,7 +718,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sYE-aS-eoY">
-                                <rect key="frame" x="16" y="72" width="343" height="459"/>
+                                <rect key="frame" x="16" y="72" width="343" height="460"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0yx-gi-myZ">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
@@ -728,22 +735,22 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAE-z0-C7M">
-                                        <rect key="frame" x="0.0" y="102" width="343" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="102" width="343" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRn-V1-SD8">
-                                        <rect key="frame" x="0.0" y="136.5" width="343" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="137" width="343" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SGU-cZ-HmB">
-                                        <rect key="frame" x="0.0" y="158" width="343" height="51"/>
+                                        <rect key="frame" x="0.0" y="159" width="343" height="51"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VKK-vZ-asT">
-                                                <rect key="frame" x="8" y="21" width="158.5" height="30"/>
+                                                <rect key="frame" x="8" y="21" width="159" height="30"/>
                                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
                                                 <state key="normal" title="Kopieren"/>
                                                 <connections>
@@ -751,7 +758,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCN-sW-Dxy">
-                                                <rect key="frame" x="176.5" y="21" width="158.5" height="30"/>
+                                                <rect key="frame" x="177" y="21" width="158" height="30"/>
                                                 <state key="normal" title="Anzeigen"/>
                                                 <connections>
                                                     <action selector="ButtonShowPasswordClick:" destination="SN3-Kz-Au8" eventType="touchUpInside" id="c07-lz-hrW"/>
@@ -761,7 +768,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                         <edgeInsets key="layoutMargins" top="21" left="8" bottom="0.0" right="8"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dmz-dS-Ogt">
-                                        <rect key="frame" x="0.0" y="211" width="343" height="248"/>
+                                        <rect key="frame" x="0.0" y="212" width="343" height="248"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pbo-wj-3i2">
                                                 <rect key="frame" x="8" y="24" width="327" height="49"/>
@@ -874,7 +881,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
             <objects>
                 <navigationController storyboardIdentifier="FolderViewController" automaticallyAdjustsScrollViewInsets="NO" id="g34-cD-zVh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yri-MP-1pw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yri-MP-1pw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -892,7 +899,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
             <objects>
                 <navigationController storyboardIdentifier="PasswordsViewController" automaticallyAdjustsScrollViewInsets="NO" id="EJC-Nd-f7f" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cK6-ie-dPg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cK6-ie-dPg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -964,7 +971,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
             <objects>
                 <navigationController storyboardIdentifier="GeneratePasswordView" automaticallyAdjustsScrollViewInsets="NO" id="CjJ-gf-QnS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ffc-P4-JPx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ffc-P4-JPx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

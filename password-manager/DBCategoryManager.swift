@@ -121,13 +121,16 @@ class DBCategoryManager
     
     //removes a category and all included passwords from the database
     func delete(category: Category) {
-        let passwords = DBPasswordManager().load(categoryId: category.id);
+        let PWManager = DBPasswordManager();
+        let passwords = PWManager.load(categoryId: category.id);
         
         for pw in passwords {
             ManagedContext.delete(pw);
+            PWManager.save(password: pw);
         }
         
         ManagedContext.delete(category);
+        save(category: category);
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		725600F81F14FB75009DDE3B /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725600F71F14FB75009DDE3B /* LocalAuthentication.framework */; };
 		7267E5AE1F0FB0DE0057DC4C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7267E5AD1F0FB0DE0057DC4C /* Security.framework */; };
 		7267E5B01F0FB18D0057DC4C /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267E5AF1F0FB18D0057DC4C /* SecurityManager.swift */; };
 		7267E5B31F0FCD350057DC4C /* RandomPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267E5B11F0FC38B0057DC4C /* RandomPassword.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		725600F71F14FB75009DDE3B /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		7267E5AD1F0FB0DE0057DC4C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7267E5AF1F0FB18D0057DC4C /* SecurityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityManager.swift; sourceTree = "<group>"; };
 		7267E5B11F0FC38B0057DC4C /* RandomPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPassword.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				725600F81F14FB75009DDE3B /* LocalAuthentication.framework in Frameworks */,
 				7267E5AE1F0FB0DE0057DC4C /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +111,7 @@
 		7267E5AC1F0FB0DE0057DC4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				725600F71F14FB75009DDE3B /* LocalAuthentication.framework */,
 				7267E5AD1F0FB0DE0057DC4C /* Security.framework */,
 			);
 			name = Frameworks;

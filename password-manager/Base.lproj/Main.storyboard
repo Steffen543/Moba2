@@ -212,7 +212,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="Hmc-cx-t53">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Suche.." id="Hmc-cx-t53">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -343,7 +343,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="34R-BD-aIw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2Vl-fa-43H">
+                        <barButtonItem key="rightBarButtonItem" title="Speichern" id="2Vl-fa-43H">
                             <connections>
                                 <action selector="SaveFolderButtonClicked:" destination="wpR-7R-Tgg" id="12p-yi-2w4"/>
                             </connections>
@@ -411,7 +411,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                                     <action selector="AddButtonClick:" destination="7Fc-KL-sRB" id="4ga-df-NBh"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="edit" id="cfF-nk-8c7">
+                            <barButtonItem title="Bearbeiten" id="cfF-nk-8c7">
                                 <connections>
                                     <action selector="EditFolderButtonClicked:" destination="7Fc-KL-sRB" id="bi4-Vg-Hqh"/>
                                 </connections>
@@ -584,7 +584,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="jRE-Ch-wZb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nUj-LK-cUr">
+                        <barButtonItem key="rightBarButtonItem" title="Speichern" id="nUj-LK-cUr">
                             <connections>
                                 <action selector="ButtonSaveClicked:" destination="wIv-JJ-kK4" id="yVv-Oi-V1n"/>
                             </connections>
@@ -887,7 +887,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Psq-2b-SwA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="UGn-oB-2Gm">
+                        <barButtonItem key="rightBarButtonItem" title="Bearbeiten" id="UGn-oB-2Gm">
                             <connections>
                                 <action selector="ButtonEditClick:" destination="SN3-Kz-Au8" id="yYz-xR-CYO"/>
                             </connections>

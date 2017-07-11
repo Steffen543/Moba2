@@ -125,6 +125,9 @@ class ShowPasswordController : UIViewController{
     
     @IBAction func ButtonEditClick(_ sender: Any) {
        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Zurück";
+        navigationItem.backBarButtonItem = backItem
 
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
         let newController = storyBoard.instantiateViewController(withIdentifier: "EditPasswordController");

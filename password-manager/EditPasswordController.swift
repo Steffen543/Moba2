@@ -65,6 +65,7 @@ class EditPasswordController : UIViewController{
         let Manager = DBPasswordManager();
         
         Manager.save(password: SelectedPassword!)
+        showToast(message: "Gespeichert");
     }
     
     func backTwo() {

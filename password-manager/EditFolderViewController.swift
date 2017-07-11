@@ -38,7 +38,8 @@ class EditFolderViewController : UIViewController{
         let Manager = DBCategoryManager();
         
         Manager.save(category: SelectedFolder!);
-        
+        showToast(message: "Gespeichert");
+
         
     }
     

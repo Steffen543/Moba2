@@ -113,10 +113,7 @@ class DBPasswordManager
             for pwd in fetchResult
             {
                 pwd.password = SecurityManager.getPasscode(identifier: String(pwd.id))
-
-            
             }
-            
             
         }
         catch let error as NSError
@@ -127,7 +124,12 @@ class DBPasswordManager
         
         return fetchResult
     }
-
+    
+    
+    //removes a category and all included passwords from the database
+    func delete(password: Password) {
+        ManagedContext.delete(password);
+    }
 }
 
 

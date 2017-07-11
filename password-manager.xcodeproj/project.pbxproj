@@ -29,6 +29,7 @@
 		B326A0211F0FCA43006412CC /* EditPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326A0201F0FCA43006412CC /* EditPasswordController.swift */; };
 		B32F46E71F0A78810040A286 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32F46E61F0A78810040A286 /* MainViewController.swift */; };
 		B32F46EB1F0A897F0040A286 /* FolderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32F46EA1F0A897F0040A286 /* FolderTableViewController.swift */; };
+		B3394E541F15124300242AE6 /* ToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3394E531F15124300242AE6 /* ToastExtension.swift */; };
 		B359B8761F0BC3270094346B /* PasswordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B359B8751F0BC3270094346B /* PasswordsViewController.swift */; };
 		B36FC37F1F14E7A000365CAE /* EditFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FC37E1F14E7A000365CAE /* EditFolderViewController.swift */; };
 		B36FC3811F14F5B800365CAE /* GeneratePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36FC3801F14F5B800365CAE /* GeneratePasswordViewController.swift */; };
@@ -80,6 +81,7 @@
 		B326A0201F0FCA43006412CC /* EditPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPasswordController.swift; sourceTree = "<group>"; };
 		B32F46E61F0A78810040A286 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B32F46EA1F0A897F0040A286 /* FolderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTableViewController.swift; sourceTree = "<group>"; };
+		B3394E531F15124300242AE6 /* ToastExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastExtension.swift; sourceTree = "<group>"; };
 		B359B8751F0BC3270094346B /* PasswordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordsViewController.swift; sourceTree = "<group>"; };
 		B36FC37E1F14E7A000365CAE /* EditFolderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFolderViewController.swift; sourceTree = "<group>"; };
 		B36FC3801F14F5B800365CAE /* GeneratePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratePasswordViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		B30389D11F0A5847007747A8 /* password-manager */ = {
 			isa = PBXGroup;
 			children = (
+				B3394E521F15123300242AE6 /* Extensions */,
 				7285C04E1F13C30B00946F26 /* FontAwesome */,
 				729171611F0BA7F30036D53E /* Data */,
 				B32F46E21F0A777D0040A286 /* Controller */,
@@ -211,6 +214,14 @@
 				B36FC3801F14F5B800365CAE /* GeneratePasswordViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		B3394E521F15123300242AE6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B3394E531F15124300242AE6 /* ToastExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +379,7 @@
 				B32F46E71F0A78810040A286 /* MainViewController.swift in Sources */,
 				7285C0501F13C35100946F26 /* FAIcon.swift in Sources */,
 				7285C0541F13CC5D00946F26 /* ShowPasswordController.swift in Sources */,
+				B3394E541F15124300242AE6 /* ToastExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -56,6 +56,10 @@ class PasswordsViewController : UITableViewController{
         }
         LabelDescription.lineBreakMode = .byWordWrapping;
         LabelDescription.numberOfLines = 0;
+        LabelDescription.sizeToFit();
+        
+        let insets: UIEdgeInsets = UIEdgeInsets(top: 50.0, left: 10.0, bottom: 0.0, right: 10.0)
+        LabelDescription.layoutMargins = insets;
 
         
     }
@@ -66,7 +70,7 @@ class PasswordsViewController : UITableViewController{
         alert.addTextField { (textField) in
             textField.text = ""
         }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+        alert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: { (action: UIAlertAction!) in
             
         }))
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in

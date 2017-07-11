@@ -102,6 +102,7 @@ class EditPasswordController : UIViewController{
     
     @IBAction func copyPasswordButtonClicked(_ sender: Any) {
         UIPasteboard.general.string = TextFieldPassword.text;
+        showToast(message: "Passwort kopiert");
     }
     
     @IBAction func generatePasswordButtonClicked(_ sender: Any) {

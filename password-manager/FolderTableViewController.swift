@@ -75,7 +75,23 @@ class FolderTableViewController : UITableViewController  {
     
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
+        
+        let manager = DBPasswordManager();
+        
         FoldersFiltered = Folders?.filter { folder in
+            
+            
+            let passwords = manager.load(categoryId: folder.id);
+            for password in passwords {
+                
+                /* check the values of all passwords in the category to search also for them */
+                if(password.name?.lowercased().range(of: searchText.lowercased()) != nil) { return true; }
+                if(password.mail?.lowercased().range(of: searchText.lowercased()) != nil) { return true; }
+                if(password.username?.lowercased().range(of: searchText.lowercased()) != nil) { return true; }
+                if(password.password?.lowercased().range(of: searchText.lowercased()) != nil) { return true; }
+                
+            }
+
             return folder.name?.lowercased().range(of: searchText.lowercased()) != nil
         }
         

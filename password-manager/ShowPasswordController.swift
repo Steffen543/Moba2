@@ -119,6 +119,7 @@ class ShowPasswordController : UIViewController{
     
     @IBAction func ButtonCopyPasswordClick(_ sender: UIButton) {
         UIPasteboard.general.string = SelectedPassword?.password;
+        showToast(message: "Passwort kopiert");
     }
   
     

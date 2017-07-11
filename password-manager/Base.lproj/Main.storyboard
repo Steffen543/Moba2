@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-qD-EQ5">
-                                <rect key="frame" x="20" y="28" width="335" height="372"/>
+                                <rect key="frame" x="20" y="28" width="335" height="381"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShieldSign" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENA-50-FAz">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
@@ -56,7 +56,7 @@
                                         </connections>
                                     </button>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qkz-o4-uXL">
-                                        <rect key="frame" x="0.0" y="196" width="335" height="175.5"/>
+                                        <rect key="frame" x="0.0" y="196" width="335" height="185"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oder benutze deine Touch ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hP-Qv-niW">
                                                 <rect key="frame" x="8" y="100" width="319" height="17"/>
@@ -64,12 +64,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FingerSign" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxb-Fz-zVp">
-                                                <rect key="frame" x="8" y="147" width="319" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwd-J2-GaK">
+                                                <rect key="frame" x="8" y="147" width="319" height="30"/>
+                                                <state key="normal" title="TouchIcon"/>
+                                                <connections>
+                                                    <action selector="onTouchIDCheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQj-QS-xh9"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="100" left="8" bottom="8" right="8"/>
                                     </stackView>
@@ -85,7 +86,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aHZ-u5-HwF"/>
                     <connections>
-                        <outlet property="FingerSignLabel" destination="yxb-Fz-zVp" id="i7V-my-TSi"/>
+                        <outlet property="FingerSign" destination="jwd-J2-GaK" id="RBC-Al-O4o"/>
                         <outlet property="FingerStrack" destination="Qkz-o4-uXL" id="RqC-hV-MaS"/>
                         <outlet property="SecureIconLabel" destination="ENA-50-FAz" id="VFa-X1-H8y"/>
                         <outlet property="passwordTextField" destination="q7I-GY-pse" id="QDw-LC-dNL"/>

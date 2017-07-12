@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-qD-EQ5">
-                                <rect key="frame" x="20" y="28" width="335" height="381"/>
+                                <rect key="frame" x="20" y="28" width="335" height="166"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShieldSign" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENA-50-FAz">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
@@ -56,17 +56,17 @@
                                             <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oo3-D7-uek"/>
                                         </connections>
                                     </button>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qkz-o4-uXL">
-                                        <rect key="frame" x="0.0" y="196" width="335" height="185"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qkz-o4-uXL">
+                                        <rect key="frame" x="0.0" y="166" width="335" height="0.0"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oder benutze deine Touch ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hP-Qv-niW">
-                                                <rect key="frame" x="8" y="100" width="319" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Oder benutze deine Touch ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hP-Qv-niW">
+                                                <rect key="frame" x="8" y="100" width="319" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwd-J2-GaK">
-                                                <rect key="frame" x="8" y="147" width="319" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwd-J2-GaK">
+                                                <rect key="frame" x="8" y="130" width="319" height="0.0"/>
                                                 <state key="normal" title="TouchIcon"/>
                                                 <connections>
                                                     <action selector="onTouchIDCheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQj-QS-xh9"/>
@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1326" y="824"/>
+            <point key="canvasLocation" x="-2233" y="824"/>
         </scene>
         <!--First Launch Controller-->
         <scene sceneID="6af-UC-Ecp">
@@ -202,7 +202,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8X-lG-Upo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-244" y="823.53823088455783"/>
+            <point key="canvasLocation" x="-1226" y="797"/>
         </scene>
         <!--Passwort Manager-->
         <scene sceneID="uhu-Z2-9Su">
@@ -915,7 +915,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
             <objects>
                 <navigationController storyboardIdentifier="FolderViewController" automaticallyAdjustsScrollViewInsets="NO" id="g34-cD-zVh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yri-MP-1pw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yri-MP-1pw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -951,7 +951,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
             <objects>
                 <navigationController storyboardIdentifier="EditPasswordController" automaticallyAdjustsScrollViewInsets="NO" id="gdc-0a-k4p" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6yR-ar-UdB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6yR-ar-UdB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -969,7 +969,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
             <objects>
                 <navigationController storyboardIdentifier="ShowPasswordController" automaticallyAdjustsScrollViewInsets="NO" id="axJ-eg-PSs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8kr-Tf-nDl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8kr-Tf-nDl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -987,7 +987,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
             <objects>
                 <navigationController storyboardIdentifier="EditFolderViewController" automaticallyAdjustsScrollViewInsets="NO" id="m6I-Fw-eLC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gri-f6-9li">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gri-f6-9li">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1005,7 +1005,7 @@ Eine Zahl ODER ein Sonderzeichen</string>
             <objects>
                 <navigationController storyboardIdentifier="GeneratePasswordView" automaticallyAdjustsScrollViewInsets="NO" id="CjJ-gf-QnS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ffc-P4-JPx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ffc-P4-JPx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

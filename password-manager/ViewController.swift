@@ -11,20 +11,15 @@ import CoreData
 import LocalAuthentication
 
 class ViewController: UIViewController {
-
     //MARK: Properties
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var SecureIconLabel: UILabel!
     @IBOutlet weak var FingerStrack: UIStackView!
     @IBOutlet weak var FingerSign: UIButton!
-    
-    
-    
+
     override func viewDidLoad() {
         SecureIconLabel.setFAIcon(icon: .FAShield, iconSize: 100);
         FingerSign.setFAIcon(icon: .FAHandOUp, iconSize: 100, forState: .normal);
-        
-        
         let AuthenticationContext = LAContext();
         var error: NSError?;
         if AuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
@@ -45,37 +40,28 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onTouchIDCheck(_ sender: Any) {
-        
         let AuthenticationContext = LAContext();
         AuthenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Unlock Passwordmanager",
-                                             reply: { [unowned self] (success, error) -> Void in
+            reply: { [unowned self] (success, error) -> Void in
                                                 
-                                                if( success ) {
-                                                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
-                                                    let newController = storyBoard.instantiateViewController(withIdentifier: "FolderViewController");
-                                                    
-                                                    self.present(newController, animated: true, completion: nil);
-                                                }else {
-                                                    
-                                                    // Check if there is an error
-                                                    if let error = error {
-                                                        let alert = UIAlertController(title: "Touch ID Fehler", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.actionSheet);
-                                                        let OkAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil);
-                                                        alert.addAction(OkAction);
-                                                        
-                                                        self.present(alert, animated: true, completion: nil);
-                                                    } else {
-                                                        GeneralHelper.shakeElement(field: self.FingerStrack);
-                                                    }
-                                                }
+             if( success ) {
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+                let newController = storyBoard.instantiateViewController(withIdentifier: "FolderViewController");
+                self.present(newController, animated: true, completion: nil);
+             } else {
+                // Check if there is an error
+                if let error = error {
+                    let alert = UIAlertController(title: "Touch ID Fehler", message: error.localizedDescription,
+                                                  preferredStyle: UIAlertControllerStyle.actionSheet);
+                    let OkAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil);
+                    alert.addAction(OkAction);
+                    self.present(alert, animated: true, completion: nil);
+                 } else {
+                    GeneralHelper.shakeElement(field: self.FingerStrack);
+                 }
+            }
         })
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     @IBAction func login(_ sender: UIButton) {
         

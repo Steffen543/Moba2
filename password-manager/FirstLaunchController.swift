@@ -18,14 +18,12 @@ class FirstLaunchController : UIViewController{
     var PasswordsEqual: Bool = false;
     var PasswordStrong: Bool = false;
     var PasswordRare: Bool = false;
-    
-    
+
     override func viewDidLoad() {
         MasterPasswordField.setRightViewFAIcon(icon: .FAExclamationCircle, rightViewMode: .unlessEditing, textColor: .red);
         SecureIconLabel.setFAIcon(icon: .FAShield, iconSize: 100);
     }
-    
-    
+
     @IBAction func onMasterFieldEditEnd() {
         let password = MasterPasswordField.text!;
         WarningLabel.isHidden = true;
@@ -43,8 +41,7 @@ class FirstLaunchController : UIViewController{
             PasswordStrong = false;
         }
     }
-    
-    
+
     @IBAction func onMasterRepeatFieldEditEnd() {
         let password = MasterPasswordField.text!;
         

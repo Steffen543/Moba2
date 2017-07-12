@@ -21,7 +21,6 @@ class EditFolderViewController : UIViewController{
         title = SelectedFolder?.name;
         TextFieldName.text = SelectedFolder?.name;
         TextFieldDescription.text = SelectedFolder?.descriptionText;
-        
     }
 
     @IBAction func SaveFolderButtonClicked(_ sender: Any) {
@@ -39,8 +38,6 @@ class EditFolderViewController : UIViewController{
         
         Manager.save(category: SelectedFolder!);
         showToast(message: "Gespeichert");
-
-        
     }
     
     func backTwo() {
@@ -49,7 +46,8 @@ class EditFolderViewController : UIViewController{
     }
     
     @IBAction func ButtonDeleteFolderClicked(_ sender: Any) {
-        let refreshAlert = UIAlertController(title: "Bestätigen", message: "Eintrag wirklich löschen?", preferredStyle: UIAlertControllerStyle.alert)
+        let refreshAlert = UIAlertController(title: "Bestätigen", message: "Eintrag wirklich löschen?",
+                                             preferredStyle: UIAlertControllerStyle.alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Ja", style: .default, handler: { (action: UIAlertAction!) in
             
@@ -63,11 +61,5 @@ class EditFolderViewController : UIViewController{
         }))
         
         present(refreshAlert, animated: true, completion: nil)
-
     }
-    
-    
-    
-    
-    
 }

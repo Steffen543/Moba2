@@ -92,6 +92,21 @@ class PasswordsViewController : UITableViewController{
             
             self.Passwords?.append(newPassword);
             self.MainTableView.reloadData();
+            
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = "Zurück";
+            self.navigationItem.backBarButtonItem = backItem
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+            let newController = storyBoard.instantiateViewController(withIdentifier: "EditPasswordController");
+            
+            // get the nav controller
+            let navController = newController as! UINavigationController;
+            // get the view controller from the nav controller
+            let viewController = navController.topViewController as!EditPasswordController;
+            viewController.SelectedPassword = newPassword;
+            self.navigationController?.pushViewController(viewController, animated: true)
         }))
         self.present(alert, animated: true, completion: nil)
     }

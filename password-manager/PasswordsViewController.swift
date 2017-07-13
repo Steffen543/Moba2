@@ -60,8 +60,6 @@ class PasswordsViewController : UITableViewController{
         
         let insets: UIEdgeInsets = UIEdgeInsets(top: 50.0, left: 10.0, bottom: 0.0, right: 10.0)
         LabelDescription.layoutMargins = insets;
-
-        
     }
 
     

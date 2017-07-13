@@ -28,31 +28,17 @@ class ShowPasswordController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //title = SelectedPassword?.name;
-        
-        print("Opening password with name \(SelectedPassword?.name)");
-        
         LabelImage.FAIcon = .FALock;
         LabelImage.setFAIcon(icon: .FALock, iconSize: 65);
         LabelDescription.lineBreakMode = .byWordWrapping;
         LabelDescription.numberOfLines = 0;
-        
-        
         ButtonCopy.setFAIcon(icon: .FAClipboard, iconSize: 35, forState: .normal);
         ButtonShow.setFAIcon(icon: .FAEye, iconSize: 35, forState: .normal)
-        
-   
-        //ButtonShow.setFAText(prefixText: "", icon: .FAEye, postfixText: " Anzeigen", size: 35, forState: .normal)
-        //ButtonCopy.setFAText(prefixText: "", icon: .FAClipboard, postfixText: " Kopieren", size: 35, forState: .normal)
-        //ButtonCopy.tintColor = UIView().tintColor;
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
         LabelName.text = SelectedPassword?.name;
         LabelDescription.text = SelectedPassword?.descriptionText;
-        
-        
         if(SelectedPassword?.password != "" || SelectedPassword?.password != nil) {
             LabelPassword.text = "**********"
             passwordIsVisible = false;
@@ -61,15 +47,8 @@ class ShowPasswordController : UIViewController{
             LabelPassword.text = "Kein Passwort"
             passwordIsVisible = false;
         }
-
-        
-        
-        
         LabelEmail.text = SelectedPassword?.mail;
         LabelUsername.text = SelectedPassword?.username;
-        
-        
-        
         if(LabelDescription.text == "" || LabelDescription.text == nil) {
             LabelDescription.text = "Keine Beschreibung";
         }
@@ -87,7 +66,6 @@ class ShowPasswordController : UIViewController{
         dateFormatter.dateFormat = "dd.MM.YYYY hh:mm";
         let addedString = dateFormatter.string(from: SelectedPassword?.createDate as! Date)
         let editedString = dateFormatter.string(from: SelectedPassword?.createDate as! Date)
-        
         LabelAdded.text = "Hinzugefügt am \(addedString)";
         LabelEdited.text = "Bearbeitet am \(editedString)";
     }
@@ -95,14 +73,11 @@ class ShowPasswordController : UIViewController{
     
     @IBAction func ButtonShowPasswordClick(_ sender: UIButton) {
         if(passwordIsVisible)! {
-            
             if(SelectedPassword?.password == "" || SelectedPassword?.password == nil){
                 LabelPassword.text = "Kein Passwort"
             } else {
                 LabelPassword.text = "**********"
             }
-            
-            
             passwordIsVisible = false;
         } else {
             
@@ -111,8 +86,6 @@ class ShowPasswordController : UIViewController{
             } else {
                 LabelPassword.text = SelectedPassword?.password;
             }
-            
-            
             passwordIsVisible = true;
         }
     }
